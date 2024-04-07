@@ -1,0 +1,692 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[11pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage[T1]{fontenc}
+\usepackage[english,french]{babel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+\usepackage[pdftex]{graphicx}
+\providecommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{2cm}
+\setlength\oddsidemargin{2cm}
+\setlength\textheight{23.829cm}
+\setlength\textwidth{17.001cm}
+\setlength\footskip{1.871cm}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+% Footnote rule
+\setlength{\skip\footins}{0.119cm}
+\renewcommand\footnoterule{\vspace*{-0.018cm}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.018cm}}\vspace*{0.101cm}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+  \renewcommand\@oddhead{}
+  \renewcommand\@evenhead{}
+  \renewcommand\@oddfoot{\thepage{}}
+  \renewcommand\@evenfoot{\@oddfoot}
+  \renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% List styles
+\newcommand\liststyleWWNumii{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\newcommand\liststyleWWNumvi{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\newcommand\liststyleWWNumv{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\newcommand\liststyleWWNumvii{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\newcommand\liststyleWWNumviii{%
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\arabic{enumi}.\arabic{enumii}}
+\renewcommand\theenumiii{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\renewcommand\theenumiv{\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\labelenumii{\theenumii.}
+\renewcommand\labelenumiii{\theenumiii.}
+\renewcommand\labelenumiv{\theenumiv.}
+}
+\newcommand\liststyleWWNumiii{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\newcommand\liststyleWWNumiv{%
+\renewcommand\labelitemi{[F0B7?]}
+\renewcommand\labelitemii{${\circ}$}
+\renewcommand\labelitemiii{${\blacksquare}$}
+\renewcommand\labelitemiv{[F0B7?]}
+}
+\title{}
+\author{}
+\date{2021-10-02}
+\begin{document}
+{\centering\selectlanguage{french}
+\textbf{Étude d'un mouvement rectiligne}
+\par}
+
+{\centering\selectlanguage{french}
+\textbf{uniformément accéléré}
+\par}
+
+{\centering\selectlanguage{french}
+\textit{Julien Bricka, Romain Blondel}
+\par}
+
+{\centering\selectlanguage{french}
+\textit{1M8, Septembre 2021}
+\par}
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textbf{But :}}
+
+{\selectlanguage{french}
+Étudier un mouvement rectiligne uniformément accéléré (MRUA) sur une table inclinée.}
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textbf{Introduction :}}
+
+{\selectlanguage{french}
+Les principaux outils théoriques que nous allons utiliser sont ceux concernant le MRUA. D'autres
+\foreignlanguage{french}{notions} peuvent néanmoins être nécessaire tel que des règles simples de proportionnalité
+comme la règle de trois. Il faut malgré tout remarquer qu'une expérience, aussi précise soit-elle, ne reproduira pas
+les conditions exactes indispensables à la précision de la théorie. Cela reste la plus pratique pour étudier cette
+\ expérience.}
+
+{\selectlanguage{french}
+Donc, en quoi consiste le MRUA. Tout d'abord, les notions principales sont :}
+
+\liststyleWWNumii
+\begin{itemize}
+\item {\selectlanguage{french}
+La distance d en [m] qui est une variation de positions x\textsubscript{n} tel que  $d=x_b-x_a$}
+\item {\selectlanguage{french}
+Le temps t en [s]}
+\item {\selectlanguage{french}
+La vitesse  $v=\frac d t$ \ en  $\left[\frac m s\right]$}
+\item {\selectlanguage{french}
+L'accélération  $a=\frac v t$ \ en  $\left[\frac m{s^2}\right]$}
+\end{itemize}
+{\selectlanguage{french}
+Il faut \foreignlanguage{french}{néanmoins} garder à l'esprit que nous calculons une vitesse ou une accélération moyenne
+car par définition, la vitesse est la variation de distance ( $\mathit{\Delta x}=x_2-x_1$) dans un intervalle de temps
+( $\mathit{\Delta t}=t_2-t_1$) et l'accélération, la variation de vitesse ( $\mathit{\Delta v}=v_2-v_1$) dans le temps.
+Il est donc plus juste d'écrire :}
+
+{\centering\selectlanguage{french}
+ $v_m=\frac{\mathit{\Delta x}}{\mathit{\Delta t}}$ \ ainsi que  $a_m=\frac{\mathit{\Delta v}}{\mathit{\Delta t}}$
+\par}
+
+{\selectlanguage{french}
+D'où, pour avoir une \textit{v} ou \textit{a} en un temps instantané, il faudrait avoir \textit{$\Delta $t} le plus
+petit possible (ce qui est moins utile pour \textit{a }dans le MRUA car c'est une constante), soit :}
+
+{\centering\selectlanguage{french}
+ $v\left(t\right)=\lim _{\mathit{\Delta t}\rightarrow 0}\frac{\mathit{\Delta x}}{\mathit{\Delta t}}$ \ et  $a=\lim
+_{\mathit{\Delta t}\rightarrow 0}\frac{\mathit{\Delta v}}{\mathit{\Delta t}}$
+\par}
+
+{\centering\selectlanguage{french}
+\textit{donc v est la dérivée (ou la tangente) de x en t et a la dérivée de v en t}
+\par}
+
+{\selectlanguage{french}
+De ces notions, on en tire l'équation horaire de la vitesse et de la distance ou de la position :}
+
+\begin{equation*}
+a=\mathit{constante}
+\end{equation*}
+\begin{equation*}
+v\left(t\right)=v_0+a{\cdot}t
+\end{equation*}
+{\centering\selectlanguage{french}
+ $x\left(t\right)-x_0=v_0{\cdot}t+\frac 1 2{\cdot}a{\cdot}t^2$ \ ou  $x\left(t\right)=x_0+v_0{\cdot}t+\frac 1
+2{\cdot}a{\cdot}t^2$
+\par}
+
+{\selectlanguage{french}
+qui forment les bases du MRUA. }
+
+
+\bigskip
+
+\clearpage{\selectlanguage{french}
+\textbf{Démarche :}}
+
+{\selectlanguage{french}
+\textit{Liste du matériel}}
+
+{\selectlanguage{french}
+\textit{Pour l'expérience :}}
+
+\liststyleWWNumvi
+\begin{itemize}
+\item {\selectlanguage{french}
+Palet avec ampoule dessus}
+\item {\selectlanguage{french}
+Deux ampoules séparées d'une distance fixe}
+\end{itemize}
+\liststyleWWNumv
+\begin{itemize}
+\item {\selectlanguage{french}
+Table à coussin d'air avec élévations}
+\item {\selectlanguage{french}
+Filet et amortisseur autour de la table pour ne pas abîmer le palet}
+\end{itemize}
+{\selectlanguage{french}
+\textit{Pour la mesure :}}
+
+\liststyleWWNumvii
+\begin{itemize}
+\item {\selectlanguage{french}
+Camera}
+\item {\selectlanguage{french}
+Disque monté sur un moteur rotatif avec deux ouvertures et une pastille réfléchissante}
+\item {\selectlanguage{french}
+Stroboscope}
+\item {\selectlanguage{french}
+Support pour la camera, perpendiculaire à la table}
+\end{itemize}
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Schéma du montage}}
+
+\begin{figure}
+\centering
+\includegraphics[width=6.216cm,height=6.877cm]{tp20mrua20doc3-img001.png}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=7.83cm,height=6.348cm]{tp20mrua20doc3-img002.png}
+\end{figure}
+[Warning: Draw object ignored][Warning: Draw object ignored]
+
+\clearpage{\selectlanguage{french}
+\textit{Marche à suivre}}
+
+\liststyleWWNumviii
+\begin{enumerate}
+\item {\selectlanguage{french}
+Surélever avec les élévations un côté et enclencher la table à coussin d'air ainsi que les divers ampoules et paramétrer
+la camera afin d'avoir une pose longue (la pose doit durer tout le long de l'expérience).}
+\item {\selectlanguage{french}
+Mesurer la vitesse de rotation du disque. Pour ce faire, dans l'obscurité, ajuster la fréquence du stroboscope afin
+d'avoir l'illusion que la pastille réfléchissante soit statique. La moitié de cette fréquence correspond à l'intervalle
+de temps entre deux points.}
+\item {\selectlanguage{french}
+Commencer la photo de la camera en lâchant le palet en même temps.}
+\item {\selectlanguage{french}
+Traiter l'image obtenue afin d'inverser les couleurs et les accentuer.}
+\item {\selectlanguage{french}
+Relever les distance sur l'image depuis un point choisi arbitrairement.}
+\end{enumerate}
+[Warning: Draw object ignored]
+
+\begin{figure}
+\centering
+\includegraphics[width=11.862cm,height=5.554cm]{tp20mrua20doc3-img003.png}
+\end{figure}
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Note : dans les tableaux qui suivent, les distance sur l'image sont nommées d et celles dans la réalité x, le
+temps t et la vitesse moyenne au point v}\textit{\textsubscript{m}}\textit{.}}
+
+
+\bigskip
+
+\clearpage{\selectlanguage{french}
+\textbf{Résultats :}}
+
+{\selectlanguage{french}
+\textit{Distance des points sur l'image et dans la réalité}}
+
+
+\bigskip
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2.105cm}|m{2.056cm}|m{2.476cm}|m{2.054cm}|}
+\hline
+\centering{\selectlanguage{french} \textbf{point}} &
+\centering{\selectlanguage{french} \textbf{t[s]}} &
+\centering{\selectlanguage{french} \textbf{d[cm]}} &
+\centering\arraybslash{\selectlanguage{french} \textbf{x[m]}}\\\hline
+\centering{\selectlanguage{french} 0} &
+\centering{\selectlanguage{french} 0.000} &
+\centering{\selectlanguage{french} 0.0} &
+\centering\arraybslash{\selectlanguage{french} 0.000}\\\hline
+\centering{\selectlanguage{french} 1} &
+\centering{\selectlanguage{french} 0.036} &
+\centering{\selectlanguage{french} 0.3} &
+\centering\arraybslash{\selectlanguage{french} 0.008}\\\hline
+\centering{\selectlanguage{french} 2} &
+\centering{\selectlanguage{french} 0.071} &
+\centering{\selectlanguage{french} 1.0} &
+\centering\arraybslash{\selectlanguage{french} 0.028}\\\hline
+\centering{\selectlanguage{french} 3} &
+\centering{\selectlanguage{french} 0.107} &
+\centering{\selectlanguage{french} 1.2} &
+\centering\arraybslash{\selectlanguage{french} 0.033}\\\hline
+\centering{\selectlanguage{french} 4} &
+\centering{\selectlanguage{french} 0.143} &
+\centering{\selectlanguage{french} 1.7} &
+\centering\arraybslash{\selectlanguage{french} 0.047}\\\hline
+\centering{\selectlanguage{french} 5} &
+\centering{\selectlanguage{french} 0.179} &
+\centering{\selectlanguage{french} 2.5} &
+\centering\arraybslash{\selectlanguage{french} 0.069}\\\hline
+\centering{\selectlanguage{french} 6} &
+\centering{\selectlanguage{french} 0.214} &
+\centering{\selectlanguage{french} 3.3} &
+\centering\arraybslash{\selectlanguage{french} 0.092}\\\hline
+\centering{\selectlanguage{french} 7} &
+\centering{\selectlanguage{french} 0.250} &
+\centering{\selectlanguage{french} 4.1} &
+\centering\arraybslash{\selectlanguage{french} 0.114}\\\hline
+\centering{\selectlanguage{french} 8} &
+\centering{\selectlanguage{french} 0.286} &
+\centering{\selectlanguage{french} 5.1} &
+\centering\arraybslash{\selectlanguage{french} 0.142}\\\hline
+\centering{\selectlanguage{french} 9} &
+\centering{\selectlanguage{french} 0.321} &
+\centering{\selectlanguage{french} 6.1} &
+\centering\arraybslash{\selectlanguage{french} 0.169}\\\hline
+\centering{\selectlanguage{french} 10} &
+\centering{\selectlanguage{french} 0.357} &
+\centering{\selectlanguage{french} 7.2} &
+\centering\arraybslash{\selectlanguage{french} 0.200}\\\hline
+\centering{\selectlanguage{french} 11} &
+\centering{\selectlanguage{french} 0.393} &
+\centering{\selectlanguage{french} 8.4} &
+\centering\arraybslash{\selectlanguage{french} 0.233}\\\hline
+\centering{\selectlanguage{french} 12} &
+\centering{\selectlanguage{french} 0.429} &
+\centering{\selectlanguage{french} 9.6} &
+\centering\arraybslash{\selectlanguage{french} 0.267}\\\hline
+\centering{\selectlanguage{french} 13} &
+\centering{\selectlanguage{french} 0.464} &
+\centering{\selectlanguage{french} 11.0} &
+\centering\arraybslash{\selectlanguage{french} 0.306}\\\hline
+\centering{\selectlanguage{french} 14} &
+\centering{\selectlanguage{french} 0.500} &
+\centering{\selectlanguage{french} 12.5} &
+\centering\arraybslash{\selectlanguage{french} 0.347}\\\hline
+\centering{\selectlanguage{french} 15} &
+\centering{\selectlanguage{french} 0.536} &
+\centering{\selectlanguage{french} 14.0} &
+\centering\arraybslash{\selectlanguage{french} 0.389}\\\hline
+\centering{\selectlanguage{french} 16} &
+\centering{\selectlanguage{french} 0.571} &
+\centering{\selectlanguage{french} 15.6} &
+\centering\arraybslash{\selectlanguage{french} 0.433}\\\hline
+\centering{\selectlanguage{french} 17} &
+\centering{\selectlanguage{french} 0.607} &
+\centering{\selectlanguage{french} 17.3} &
+\centering\arraybslash{\selectlanguage{french} 0.481}\\\hline
+\centering{\selectlanguage{french} 18} &
+\centering{\selectlanguage{french} 0.643} &
+\centering{\selectlanguage{french} 19.1} &
+\centering\arraybslash{\selectlanguage{french} 0.531}\\\hline
+\centering{\selectlanguage{french} 19} &
+\centering{\selectlanguage{french} 0.679} &
+\centering{\selectlanguage{french} 21.0} &
+\centering\arraybslash{\selectlanguage{french} 0.583}\\\hline
+\centering{\selectlanguage{french} 20} &
+\centering{\selectlanguage{french} 0.714} &
+\centering{\selectlanguage{french} 22.9} &
+\centering\arraybslash{\selectlanguage{french} 0.636}\\\hline
+\centering{\selectlanguage{french} 21} &
+\centering{\selectlanguage{french} 0.750} &
+\centering{\selectlanguage{french} 24.9} &
+\centering\arraybslash{\selectlanguage{french} 0.692}\\\hline
+\centering{\selectlanguage{french} 22} &
+\centering{\selectlanguage{french} 0.786} &
+\centering{\selectlanguage{french} 27.0} &
+\centering\arraybslash{\selectlanguage{french} 0.750}\\\hline
+\centering{\selectlanguage{french} 23} &
+\centering{\selectlanguage{french} 0.821} &
+\centering{\selectlanguage{french} 29.1} &
+\centering\arraybslash{\selectlanguage{french} 0.808}\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Notes :}}
+
+\liststyleWWNumiii
+\begin{itemize}
+\item {\selectlanguage{french}
+\textit{le temps est de + } $\frac 1{28}$ \textit{\ secondes entre 2 points}}
+\item {\selectlanguage{french}
+\textit{18 [cm] sur l'image valent 50[cm] dans la réalité}}
+\end{itemize}
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Vitesse moyenne en chaque points}}
+
+
+\bigskip
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2.074cm}|m{2.052cm}|m{2.056cm}|m{3.748cm}|}
+\hline
+\centering{\selectlanguage{french} \textbf{point}} &
+\centering{\selectlanguage{french} \textbf{t[s]}} &
+\centering{\selectlanguage{french} \textbf{x[m]}} &
+\centering\arraybslash{\selectlanguage{french} \textbf{v}\textbf{\textsubscript{m}}\textbf{[m/s]}}\\\hline
+\centering{\selectlanguage{french} 0} &
+\centering{\selectlanguage{french} 0.000} &
+\centering{\selectlanguage{french} 0.000} &
+\centering\arraybslash{\selectlanguage{french} Données insuffisantes}\\\hline
+\centering{\selectlanguage{french} 1} &
+\centering{\selectlanguage{french} 0.036} &
+\centering{\selectlanguage{french} 0.008} &
+\centering\arraybslash{\selectlanguage{french} 0.389}\\\hline
+\centering{\selectlanguage{french} 2} &
+\centering{\selectlanguage{french} 0.071} &
+\centering{\selectlanguage{french} 0.028} &
+\centering\arraybslash{\selectlanguage{french} 0.350}\\\hline
+\centering{\selectlanguage{french} 3} &
+\centering{\selectlanguage{french} 0.107} &
+\centering{\selectlanguage{french} 0.033} &
+\centering\arraybslash{\selectlanguage{french} 0.272}\\\hline
+\centering{\selectlanguage{french} 4} &
+\centering{\selectlanguage{french} 0.143} &
+\centering{\selectlanguage{french} 0.047} &
+\centering\arraybslash{\selectlanguage{french} 0.506}\\\hline
+\centering{\selectlanguage{french} 5} &
+\centering{\selectlanguage{french} 0.179} &
+\centering{\selectlanguage{french} 0.069} &
+\centering\arraybslash{\selectlanguage{french} 0.622}\\\hline
+\centering{\selectlanguage{french} 6} &
+\centering{\selectlanguage{french} 0.214} &
+\centering{\selectlanguage{french} 0.092} &
+\centering\arraybslash{\selectlanguage{french} 0.622}\\\hline
+\centering{\selectlanguage{french} 7} &
+\centering{\selectlanguage{french} 0.250} &
+\centering{\selectlanguage{french} 0.114} &
+\centering\arraybslash{\selectlanguage{french} 0.700}\\\hline
+\centering{\selectlanguage{french} 8} &
+\centering{\selectlanguage{french} 0.286} &
+\centering{\selectlanguage{french} 0.142} &
+\centering\arraybslash{\selectlanguage{french} 0.778}\\\hline
+\centering{\selectlanguage{french} 9} &
+\centering{\selectlanguage{french} 0.321} &
+\centering{\selectlanguage{french} 0.169} &
+\centering\arraybslash{\selectlanguage{french} 0.817}\\\hline
+\centering{\selectlanguage{french} 10} &
+\centering{\selectlanguage{french} 0.357} &
+\centering{\selectlanguage{french} 0.200} &
+\centering\arraybslash{\selectlanguage{french} 0.894}\\\hline
+\centering{\selectlanguage{french} 11} &
+\centering{\selectlanguage{french} 0.393} &
+\centering{\selectlanguage{french} 0.233} &
+\centering\arraybslash{\selectlanguage{french} 0.933}\\\hline
+\centering{\selectlanguage{french} 12} &
+\centering{\selectlanguage{french} 0.429} &
+\centering{\selectlanguage{french} 0.267} &
+\centering\arraybslash{\selectlanguage{french} 1.011}\\\hline
+\centering{\selectlanguage{french} 13} &
+\centering{\selectlanguage{french} 0.464} &
+\centering{\selectlanguage{french} 0.306} &
+\centering\arraybslash{\selectlanguage{french} 1.128}\\\hline
+\centering{\selectlanguage{french} 14} &
+\centering{\selectlanguage{french} 0.500} &
+\centering{\selectlanguage{french} 0.347} &
+\centering\arraybslash{\selectlanguage{french} 1.167}\\\hline
+\centering{\selectlanguage{french} 15} &
+\centering{\selectlanguage{french} 0.536} &
+\centering{\selectlanguage{french} 0.389} &
+\centering\arraybslash{\selectlanguage{french} 1.206}\\\hline
+\centering{\selectlanguage{french} 16} &
+\centering{\selectlanguage{french} 0.571} &
+\centering{\selectlanguage{french} 0.433} &
+\centering\arraybslash{\selectlanguage{french} 1.283}\\\hline
+\centering{\selectlanguage{french} 17} &
+\centering{\selectlanguage{french} 0.607} &
+\centering{\selectlanguage{french} 0.481} &
+\centering\arraybslash{\selectlanguage{french} 1.361}\\\hline
+\centering{\selectlanguage{french} 18} &
+\centering{\selectlanguage{french} 0.643} &
+\centering{\selectlanguage{french} 0.531} &
+\centering\arraybslash{\selectlanguage{french} 1.439}\\\hline
+\centering{\selectlanguage{french} 19} &
+\centering{\selectlanguage{french} 0.679} &
+\centering{\selectlanguage{french} 0.583} &
+\centering\arraybslash{\selectlanguage{french} 1.478}\\\hline
+\centering{\selectlanguage{french} 20} &
+\centering{\selectlanguage{french} 0.714} &
+\centering{\selectlanguage{french} 0.636} &
+\centering\arraybslash{\selectlanguage{french} 1.517}\\\hline
+\centering{\selectlanguage{french} 21} &
+\centering{\selectlanguage{french} 0.750} &
+\centering{\selectlanguage{french} 0.692} &
+\centering\arraybslash{\selectlanguage{french} 1.594}\\\hline
+\centering{\selectlanguage{french} 22} &
+\centering{\selectlanguage{french} 0.786} &
+\centering{\selectlanguage{french} 0.750} &
+\centering\arraybslash{\selectlanguage{french} 1.633}\\\hline
+\centering{\selectlanguage{french} 23} &
+\centering{\selectlanguage{french} 0.821} &
+\centering{\selectlanguage{french} 0.808} &
+\centering\arraybslash{\selectlanguage{french} Données insuffisantes}\\\hline
+\end{supertabular}
+\end{flushleft}
+{\selectlanguage{french}
+\textit{Notes :}}
+
+\liststyleWWNumiv
+\begin{itemize}
+\item {\selectlanguage{french}
+\textit{Afin d' avoir la vitesse moyenne, on a utilisé la formule } $v_m=\frac{x_{n+1}-x_{n-1}}{t_{n+1}-t_{n-1}}$
+\textit{\ donc cela explique l'absence de la première et dernière cellule}}
+\end{itemize}
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Diagrammes}}
+
+\begin{figure}
+\centering
+\includegraphics[width=17cm,height=9.959cm]{tp20mrua20doc3-img004.png}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=17cm,height=10.285cm]{tp20mrua20doc3-img005.png}
+\end{figure}
+\clearpage{\selectlanguage{french}
+\textbf{Analyse des résultats :}}
+
+{\selectlanguage{french}
+\textit{Les résultats obtenus correspondent-ils à un MRUA ?}}
+
+{\selectlanguage{french}
+Nonobstant quelque mesures pas aussi précise qu'espéré donnant lieu à cause de la propagation de l'incertitude à des
+vitesses incohérentes avec le reste (v\textsubscript{m} au point 1 et 3, possiblement due également au fait que ces
+points sont peu après le lâché du palet), les courbes de tendances correspondent à un MRUA. En effet, pour la variation
+de position, cela donne une fonction quadratique et une fonction linéaire pour la variation de vitesse.}
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textit{Donc, que vaut l'accélération a et la vitesse v}\textit{\textsubscript{0~}}\textit{?}}
+
+{\selectlanguage{french}
+Pour connaître v\textsubscript{0 }et a, il suffi de reprendre l'équation horaire de la vitesse 
+$v\left(t\right)=v_0+a{\cdot}t$ \ et de la comparer avec avec la courbe de tendance 
+$v\left(t\right)=1.819{\cdot}t+0.304$ et faire de même avec celles de la position, 
+$x\left(t\right)=x_0+v_0{\cdot}t+\frac 1 2{\cdot}a{\cdot}t^2$ \ et $x\left(t\right)=0.921{\cdot}t^2+0.231{\cdot}t$.
+Sachant que x\textsubscript{0} vaut 0 (voir tableaux de résultats), voici les valeurs de a et v\textsubscript{0~}:}
+
+
+\bigskip
+
+\begin{flushleft}
+\tablefirsthead{}
+\tablehead{}
+\tabletail{}
+\tablelasttail{}
+\begin{supertabular}{|m{2.111cm}|m{2.056cm}|m{2.06cm}|m{2.056cm}|}
+\hline
+~
+ &
+\centering{\selectlanguage{french} \textbf{Via x(t)}} &
+\centering{\selectlanguage{french}\bfseries Via v(t)} &
+\centering\arraybslash{\selectlanguage{french} \textbf{Moyenne}}\\\hline
+\centering{\selectlanguage{french} \textbf{\textit{v}}\textbf{\textit{\textsubscript{0}}}\textbf{\textit{[m/s]}}} &
+\centering{\selectlanguage{french} 0.231} &
+\centering{\selectlanguage{french} 0.304} &
+\centering\arraybslash{\selectlanguage{french} 0.268}\\\hline
+\centering{\selectlanguage{french} \textbf{\textit{a[m/s{\texttwosuperior}]}}} &
+\centering{\selectlanguage{french} 1.842} &
+\centering{\selectlanguage{french} 1.819} &
+\centering\arraybslash{\selectlanguage{french} 1.831}\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+{\selectlanguage{french}
+Par voie de conséquence, en injectant tout les résultats obtenus plus haut dans les équations du MRUA, on obtient un
+modèle assez précis du mouvement du palet :}
+
+\begin{equation*}
+a{\approx}1.831\left[\frac m{s^2}\right]
+\end{equation*}
+\begin{equation*}
+v\left(t\right){\approx}0.268\left[\frac m s\right]+1.831\left[\frac m{s^2}\right]{\cdot}t
+\end{equation*}
+\begin{equation*}
+x\left(t\right){\approx}0.268\left[\frac m s\right]{\cdot}t+\frac 1 2{\cdot}1.831\left[\frac m{s^2}\right]{\cdot}t^2
+\end{equation*}
+
+\bigskip
+
+
+\bigskip
+
+{\selectlanguage{french}
+\textbf{Conclusion :}}
+
+{\selectlanguage{french}
+Cette expérience a permis l'observation concrète d'un MRUA. Les résultats obtenu sont très corrects en raison des
+nombreuses causent d'incertitude (mesures des distances, tailles des taches de lumières et donc repère entre deux
+points très imprécis, mesure du temps entre deux points, {\dots}). Néanmoins, les données ont permis malgré tout de
+calculer tout les éléments du MRUA impliqués dans l'expérience. Des observations plus précises seraient possibles à
+l'aide de laser afin de mesurer les distance, soit de cellules et on enregistre le moment de passage dans chaque une
+d'entre elles, ou quelque chose de moins envisageable, mais qui reste pertinent, comme l'émission d'un court rayon et
+de mesurer le temps qu'il met à toucher le palais et revenir pendant un intervalle de temps régulier. Cette dernière
+serait dans le principe pareille à ce qui a été fait mais de manière beaucoup plus précise.}
+\end{document}
