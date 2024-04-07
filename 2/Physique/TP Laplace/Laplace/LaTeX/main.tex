@@ -1,0 +1,543 @@
+%! Author = cqa
+%! Date = 02.05.23
+
+\documentclass[11pt]{article}
+% Basic Packages for Encoding (Input AND Output) and Langauge Support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Change Layout with a User-Friendly Interface
+\usepackage[margin=1in]{geometry}
+
+% Include Pictures with a User-Friendly Interface
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+
+% Extended Math Support from the Famous 'American Mathematical Society'
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Just for Demonstration Purposes
+\usepackage[math]{blindtext}
+
+% For the chemistry
+\usepackage{chemist}
+
+% For use on computer
+\usepackage{hyperref}
+
+% For table color
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+
+% Tableau verticale
+\usepackage{rotating}
+
+% Figure dans figure
+\usepackage{subfig}
+
+% Multicolumn
+\usepackage{multirow}
+
+% Preuves
+\usepackage{amsthm}
+
+% Footnote
+\usepackage[bottom]{footmisc}
+
+% PsTricks
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pstricks-add}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage[space]{grffile} % For spaces in paths
+\usepackage{etoolbox} % For spaces in paths
+\makeatletter % For spaces in paths
+\patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+\makeatother
+
+\usepackage{auto-pst-pdf}
+
+% Graphiques
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+% Titre
+\usepackage[affil-it]{authblk}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\title{\textbf{TP Force de Laplace}}
+\author{Camille Yerly, Romain Blondel}
+\affil{2M8, Gymnase Auguste Piccard}
+
+% Document
+\begin{document}
+    \rowcolors{1}{lightgray}{} % Coloration des lignes
+    \maketitle
+
+    \section{But}\label{sec:but}
+
+    Le but de ce TP est de vérifier la validité de la formule de Laplace en variant les différents paramètres
+    de celle-ci (le courant, la longueur et le champ magnétique (norme et direction)) et d'analyser les
+    effets de ces paramètres sur ladite force.
+
+    \section{Introduction}\label{sec:introduction}
+    La force de Laplace est utilisée pour calculer l'effet des champs magnétiques sur les conducteurs
+    électriques.
+    La force de Laplace découle de la force de Lorentz qui décrit l'action du champ magnétique sur des
+    particules chargées en mouvement.
+    En raison de la facilité avec laquelle il est possible de générer des champs magnétiques et le fait que
+    la force s'exerce à distante, on trouve de nombreuses applications pratiques à ce phénomène.
+    Par exemple, l'imagerie médicale (IRM) repose sur ce principe.
+    De plus, elle offre des applications indispensables dans notre vie de tous les jours, comme par
+    exemple les moteurs électriques.
+    En effet, dans ce cas, elle permet de créer une force perpendiculaire à la direction du courant, ce qui permet de
+    faire tourner un moteur via un courant électrique dans un champ magnétique.\\
+    Historiquement, cette force fut découverte en observant l'effet des courant électriques sur les champs
+    magnétiques.
+    Par exemple, une boussole aura un comportement anormal en présence de courants électriques.
+    Cette force fut observée par plusieurs scientifiques, mais il fallut plusieurs années avant que Coulomb
+    ne parviennent, au moyen d'une balance de torsion, à démontrer ce phénomène.\\
+    En effet, le champ magnétique applique force perpendiculaire au sens du courant.
+    La force de Lorentz décrit la force d'un champs magnétique sur une charge électrique.
+    Elle s'applique selon la formule suivante:
+    \[\vec{F}=q\cdot\vec{v}\times\vec{B}\]
+    Avec :
+    \begin{itemize}
+        \item $\vec{F}$ la force de Lorenz en $[N]$
+        \item $q$ la charge en $[C]$
+        \item $\vec{v}$ la vitesse de la particule en $[\frac{m}{s}]$
+        \item $\vec{B}$ le champ magnétique en $[T]$
+    \end{itemize}
+    La force de Laplace peut être décrite comme la résultante de toutes les forces de Lorentz dans un
+    conducteur.
+    La force de Laplace se décrit donc, non avec le charges, mais en rapport avec le conducteur de ces
+    charges.
+    Cette force s'exprime ainsi:
+    \[\vec{F}=I\cdot\vec{L}\times\vec{B}\]
+    Avec :
+    \begin{itemize}
+        \item $\vec{F}$ la force de Laplace en $[N]$
+        \item $I$ le courant en $[A]$
+        \item $\vec{L}$ la longueur du tronçon du conducteur en $[m]$
+        \item $\vec{B}$ le champ magnétique en $[T]$
+    \end{itemize}
+    et une fois normalisée:
+    \[|\vec{F_{La}}|=I\cdot|\vec{L}|\cdot|\vec{B}|\cdot\sin\alpha\]
+    En prenant $t$ le temps pendant lequel un conducteur est traversé par une charge, $q=It$ et la vitesse
+    de cette charges est $\vec{v}=\frac{\vec{L}}{t}$.
+    En combinant les deux, nous pouvons voir $q\cdot\vec{v}=I\cdot\vec{L}$.
+    Par conséquent, nous pouvons faire le lien entre ces deux forces.
+
+    \section{Principe de mesure et description}\label{sec:principe-de-mesure-et-description}
+
+    \subsection{Matériel}\label{subsec:materiel}
+
+    \begin{itemize}
+        \item Support pour la plaque et la bobine
+        \item Plaques avec des fils conducteurs de diverses longueur
+        \item Balance de précision
+        \item Plusieurs aimants (identiques) et leur support afin de former un ``aimant''
+        \item Statif
+        \item Générateur
+        \item Bobine avec roue graduée
+    \end{itemize}
+
+    \subsection{Déroulement}\label{subsec:deroulement}
+
+    Nous avons fait quatre expériences permettant chacune de varier un paramètre de la formule:
+    \[|\vec{F_{La}}|=I\cdot|\vec{L}|\cdot|\vec{B}|\cdot\sin\alpha\]
+    le courant $I$, la longueur du fil $L$ , la norme du champ magnétique $B$ et l'angle $\alpha$
+    entre $\vec{B}$ et $\vec{L}$.
+    \subsubsection{Expérience 1: Courant}
+    \begin{enumerate}
+        \item Nous avons placé les six aimants sur sur leur support que nous avons mis sur la balance de
+        précision et avons placée la plaque de longueur maximale dans le support entre les aimants.
+        \item Nous ensuite fait varier le courant de -5 $[A]$ à 5 $[A]$ en relevant la masse tous les
+        0.5 $[A]$.
+        Pour chaque mesure, nous avons éteint puis rallumé le générateur afin d'éviter que le système
+        chauffe et que les fils fondent.
+    \end{enumerate}
+    \subsubsection{Expérience 2: Longueur du fil}
+    En gardant le même montage (même nombres d'aimants), nous avons cette fois fait changer les plaques,
+    afin de faire varier la longueur du fil.
+    Nous avons effectué chaque mesure à 5 $[A]$.
+    Nous avons effectué les mesures pour chacune des six plaques.
+    \subsubsection{Expérience 3: Norme du champ}
+    \begin{enumerate}
+        \item Nous avons remis la plaque de longueur maximale et avons gardé le courant à 5 $[A]$.
+        \item Nous avons varier le nombre d'aimants, de 1 à 6, en faisant attention de les centrer à chaque
+        fois et avons relevé des mesures pour chaque variation.
+    \end{enumerate}
+    \subsubsection{Expérience 4: Direction du champ}
+    \begin{enumerate}
+        \item Cette fois, nous avons remplacé la plaque par une bobine avec roue graduée (rapporteur) et
+        l'avons centré de sorte à ce qu'elle ne dérange pas le support à aimant dans sa rotation et pour que,
+        lorsque le rapporteur indiquait $0 \ [^\circ]$ la masse soit nulle.
+        \item Avec un courant fixé à 2 $[V]$, nous avons fait varier l'angle entre la bobine et le champs
+        magnétique de $-90 \ [^\circ]$ à $+90 \ [^\circ]$ en relevant la masse tous les $10 \ [^\circ]$.
+    \end{enumerate}
+
+    \subsection{Schémas}\label{subsec:schemas}
+
+    \begin{minipage}{.45\textwidth}
+        \input{ext/schema-exp}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.45\textwidth}
+        \input{ext/schema-angle}
+    \end{minipage}
+
+
+    \section{Résultats et calculs}\label{sec:resultats-et-calculs}
+
+    Ci-dessous, les résultats obtenus lors de l'expérience.
+    Afin de mesurer la force de Laplace, nous avons utilisé la troisième loi de Newton.
+    En effet, la force de Laplace exercée sur le conducteur est égale à la force exercée
+    par le conducteur sur le champ magnétique.
+    En d'autres termes, la force de Laplace que subit la plaque est égale à la force de
+    exercée sur l'aimant (au signe près, mais cela est négligeable dans le but de vérifier la formule).
+    En mettant l'aimant sur une balance, nous avons pu mesurer cette dernière, en mettant la balance à 0,
+    puis en relevant la masse affichée lorsque du courant passe dans la plaque.
+    Comme la balance convertit la force en masse, nous avons dû opérer l'opération inverse afin d'obtenir
+    la force de réponse qui est égale à la force de Laplace : $ m = \frac{F}{g} \Leftrightarrow F = m \cdot g $,
+    avec $ g = 9.81 \left[\frac{m}{s^2}\right] $.\\ \\
+    Les paramètres de l'expérience sont maximaux sauf pour celui qui est étudié.
+    Cela veut donc dire que le courant est de $5 \ [A]$, il y a les 6 aimants pour créer le champ magnétique,
+    la plaque est à 90 degrés et la longueur du fil est de $8.4 \ [cm]$.
+    De plus, le voltage du circuit est plafonné entre $3 \text{ et } 4 \ [V]$. \\
+    À noter encore que la balance est sensible à $0.01 \ [g]$ près, et que l'on considère le champ magnétique
+    comme étant homogène.
+    Finalement, dans les tableaux ci-dessous, les valeurs de $F$ sont arrondies à $10^{-3} \ [N]$ près,
+    cela juste afin de donner un ordre d'idée, néanmoins les calculs et graphiques sont faits avec les valeurs
+    exactes. \\ \\
+    Les deux premiers tableaux ci-dessous montrent les mesures en faisant varier le courant.
+    Le premier contient les valeurs de courant recommender par le protocole, et le second est fait avec des
+    valeurs de courant $ 10 \times$ plus petites dû à une mauvaise manipulation, mais les résultats sont
+    pertinents et donc intégrés dans le rapport. \\
+    Le troisième tableau montre les mesures en avec un angle différent.
+    Afin de modifier ce facteur, nous avons dû utilisé un montage différent, comme montré sur le
+    schéma de la figure~\ref{fig:schema-angle}.
+    De plus, le courant sur cette mesure est fixé à $2 \ [A]$ afin de ne pas abimer le matériel.
+
+    \begin{minipage}{.6\textwidth}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \rowcolor{gray} $I \ [A]$ & $m \ [g]$ & $F \ [N]$ \\
+                \hline
+                -5 & -3.30 & -0.032 \\
+                \hline
+                -4.5 & -2.97 & -0.029 \\
+                \hline
+                -4 & -2.65 & -0.026 \\
+                \hline
+                -3.5 & -2.33 & -0.023 \\
+                \hline
+                -3 & -2.00 & -0.020 \\
+                \hline
+                -2.5 & -1.67 & -0.016 \\
+                \hline
+                -2 & -1.34 & -0.013 \\
+                \hline
+                -1.5 & -1.01 & -0.010 \\
+                \hline
+                -1 & -0.66 & -0.006 \\
+                \hline
+                -0.5 & -0.31 & -0.003 \\
+                \hline
+                0 & 0.00 & 0.000 \\
+                \hline
+                0.5 & 0.32 & 0.003 \\
+                \hline
+                1 & 0.65 & 0.006 \\
+                \hline
+                1.5 & 0.98 & 0.010 \\
+                \hline
+                2 & 1.30 & 0.013 \\
+                \hline
+                2.5 & 1.63 & 0.016 \\
+                \hline
+                3 & 1.95 & 0.019 \\
+                \hline
+                3.5 & 2.29 & 0.022 \\
+                \hline
+                4 & 2.60 & 0.026 \\
+                \hline
+                4.5 & 2.93 & 0.029 \\
+                \hline
+                5 & 3.26 & 0.032 \\
+                \hline
+            \end{tabular}
+            \hspace{1cm}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \rowcolor{gray} $I \ [A]$ & $m \ [g]$ & $F \ [N]$ \\
+                \hline
+                -0.5 & -0.31 & -0.003 \\
+                \hline
+                -0.45 & -0.29 & -0.003 \\
+                \hline
+                -0.4 & -0.26 & -0.003 \\
+                \hline
+                -0.35 & -0.24 & -0.002 \\
+                \hline
+                -0.3 & -0.21 & -0.002 \\
+                \hline
+                -0.25 & -0.16 & -0.002 \\
+                \hline
+                -0.2 & -0.12 & -0.001 \\
+                \hline
+                -0.15 & -0.10 & -0.001 \\
+                \hline
+                -0.1 & -0.06 & -0.001 \\
+                \hline
+                -0.05 & -0.02 & -0.000 \\
+                \hline
+                0 & 0.00 & 0.000 \\
+                \hline
+                0.05 & 0.03 & 0.000 \\
+                \hline
+                0.1 & 0.06 & 0.001 \\
+                \hline
+                0.15 & 0.09 & 0.001 \\
+                \hline
+                0.2 & 0.12 & 0.001 \\
+                \hline
+                0.25 & 0.16 & 0.002 \\
+                \hline
+                0.3 & 0.20 & 0.002 \\
+                \hline
+                0.35 & 0.22 & 0.002 \\
+                \hline
+                0.4 & 0.26 & 0.003 \\
+                \hline
+                0.45 & 0.29 & 0.003 \\
+                \hline
+                0.5 & 0.32 & 0.003 \\
+                \hline
+            \end{tabular}
+            \caption{Mesures de la force de Laplace en fonction de l'intensité du courant}
+            \label{tab:mesure-cour}
+        \end{table}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.3\textwidth}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \rowcolor{gray} $\alpha \ [^\circ]$ & $m \ [g]$ & $F \ [N]$ \\
+                \hline
+                -90 & -0.99 & -0.010 \\
+                \hline
+                -80 & -0.97 & -0.010 \\
+                \hline
+                -70 & -0.94 & -0.009 \\
+                \hline
+                -60 & -0.85 & -0.008 \\
+                \hline
+                -50 & -0.76 & -0.007 \\
+                \hline
+                -40 & -0.64 & -0.006 \\
+                \hline
+                -30 & -0.50 & -0.005 \\
+                \hline
+                -20 & -0.35 & -0.003 \\
+                \hline
+                -10 & -0.17 & -0.002 \\
+                \hline
+                0 & 0.00 & 0.000 \\
+                \hline
+                10 & 0.15 & 0.001 \\
+                \hline
+                20 & 0.32 & 0.003 \\
+                \hline
+                30 & 0.48 & 0.005 \\
+                \hline
+                40 & 0.62 & 0.006 \\
+                \hline
+                50 & 0.73 & 0.007 \\
+                \hline
+                60 & 0.83 & 0.008 \\
+                \hline
+                70 & 0.89 & 0.009 \\
+                \hline
+                80 & 0.92 & 0.009 \\
+                \hline
+                90 & 0.95 & 0.009 \\
+                \hline
+            \end{tabular}
+            \caption{Mesures de la force de Laplace en fonction de l'angle}
+            \label{tab:mesure-angle}
+        \end{table}
+    \end{minipage}
+
+    Les deux derniers tableau sont à nouveau sur le premier montage, figure~\ref{fig:schema-principal}.
+    Les plaques étant nommée, ceux-ci sont reporté dans le tableau~\ref{tab:mesure-longueur}, et pour
+    les autres nous avons uniquement utilisé celle ``SF 42''.\\
+    La table~\ref{tab:mesure-aimants} relève les résultats de la mesure de la force de Laplace en fonction
+    du nombre de petits aimants composant l'aimant qui crée le champ magnétique.
+    Il est toutefois à noter que nous considérons dans tout les cas le champ magnétique comme homogène.
+
+    \begin{minipage}{.45\textwidth}
+        \begin{table}[H]
+            \centering
+
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \rowcolor{gray} $l \ [cm]$ & \# SF & $m \ [g]$ & $F \ [N]$ \\
+                \hline
+                1.2 & 40 & 0.42 & 0.004 \\
+                \hline
+                2.2 & 37 & 0.89 & 0.009 \\
+                \hline
+                3.2 & 39 & 1.31 & 0.013 \\
+                \hline
+                4.2 & 38 & 1.74 & 0.017 \\
+                \hline
+                6.4 & 41 & 2.50 & 0.025 \\
+                \hline
+                8.4 & 42 & 3.26 & 0.032 \\
+                \hline
+            \end{tabular}
+            \caption{Mesures de la force de Laplace en fonction de la longueur du fil}
+            \label{tab:mesure-longueur}
+        \end{table}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.45\textwidth}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \rowcolor{gray} \# aimants & $m \ [g]$ & $F \ [N]$ \\
+                \hline
+                1 & 0.76 & 0.007 \\
+                \hline
+                2 & 1.20 & 0.012 \\
+                \hline
+                3 & 1.84 & 0.018 \\
+                \hline
+                4 & 2.47 & 0.024 \\
+                \hline
+                5 & 3.24 & 0.032 \\
+                \hline
+                6 & 3.26 & 0.032 \\
+                \hline
+            \end{tabular}
+            \caption{Mesures de la force de Laplace en fonction du nombre d'aimants}
+            \label{tab:mesure-aimants}
+        \end{table}
+    \end{minipage}\\
+
+    Afin de pouvoir étudié les résultats, nous avons représenté les données sous forme de graphique.
+    Sur chaque graphique, ont a reporté nos mesures, et afin de simplifier la lecture, nous avons
+    ajouté une courbe de tendance, obtenue par la méthode des moindres carrés.
+    Pour tout les graphes sauf la figure~\ref{fig:angle}, c'est une fonction linéaire, soit d'équation
+    $ f(x) = a \cdot x $, dont le facteur $a$ est indiqué dans la légende, arrondi au millième.
+    Pour la dernière, c'est une fonction linéaire du sinus, soit d'équation $ f(x) = a \cdot \sin(x) $,
+    également indiqué dans la légende. \\ \\
+    Sur les graphes des figures~\ref{fig:courant},~\ref{fig:longueur} et~\ref{fig:aimants}, nous avons
+    également ajouté une droite obtenue en calculant via les valeurs théoriques de la force de Laplace :
+    $ F = I \cdot L \cdot B $, avec pour les fois où c'est fixe $L = 8.4 \ [cm]$ et $I = 5 \ [A]$.
+    Le champs $B$ est obtenu via la mesure ``\# 6'' de la table~\ref{tab:mesure-aimants}, via la formule
+    $ F = I \cdot L \cdot B \Leftrightarrow B = \frac{F}{I \cdot L} \approx 0.076 \ [T] $.
+    Pour la figure~\ref{fig:aimants}, nous avons exprimé le nombre d'aimant $N$, puis pour la courbe en trait
+    non-continu, nous avons utilisé la formule $F = I \cdot L \cdot \frac{B \cdot N}{6} $ pour modéliser
+    la variation du champ magnétique selon le nombre de petits aimants.\\
+    Pour la figure~\ref{fig:angle}, nous ne pouvions pas faire de même, ne connaissant pas la longueur
+    de la bobine.\\ \\
+    Pour la variation de courant, figure~\ref{fig:courant}, nous avons séparé les graphes afin de pouvoir
+    mieux voir les résultats, et nous avons également ajouté un graphe avec toutes les mesures, afin de
+    pouvoir bien constater la tendance générale.\\
+
+    \begin{figure}[H]
+        \centering
+        \subfloat[Mesure normale]{\input{ext/cour_cor}}\\
+        \subfloat[Courant $10 \times$ plus petit]{\input{ext/cour}}
+        \hfill
+        \subfloat[Toutes les mesures]{\input{ext/cour_all}}
+        \caption{Graphes des mesures selon l'intensité du courant}
+        \label{fig:courant}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \input{ext/long}
+        \caption{Graphes des mesures selon de la longueur du fil}
+        \label{fig:longueur}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \input{ext/magn}
+        \caption{Graphes des mesures selon le nombre d'aimants}
+        \label{fig:aimants}
+    \end{figure}
+
+    \begin{figure}[H]
+        \subfloat[Graphe selon l'angle]{\input{ext/angle}}
+        \hfill
+        \subfloat[Graphe selon le sinus de l'angle]{\input{ext/angle_sin}}
+        \caption{Graphes des mesures selon l'angle}
+        \label{fig:angle}
+    \end{figure}
+
+    \section{Discussion des résultats}\label{sec:discussion-des-resultats}
+
+    Nous observons bien dans nos résultats les relations de proportionnalité entre la force de Laplace
+    et l'intensité du courant, la longueur du fil, l'intensité du champ magnétique et le sinus de l'angle. \\ \\
+    Notons tout d'abord que via les tableaux, nous pouvons voir des mesures très petites pour les forces,
+    ce qui est normal, car la force de Laplace est très faible, mais demeure tout de même mesurable.
+    Il faut quand même remarquer que pour la percevoir, la balance est très sensible, et il faut donc
+    faire attention à ne pas la faire bouger, car cela fausserait les mesures.
+    De plus, le calibrage de celle-ci à zéro au point neutre de la mesure n'est pas toujours aisé,
+    et il oscillait parfois avec $\pm 0.01 \ [g]$. \\ \\
+    Ensuite, nous pouvons assez clairement voir la relation de proportionnalité entre les résultats.
+    Sur la variation de courant, figure~\ref{fig:courant}, la courbe de tendance est très proche pour les
+    deux échelles de mesure, et cela est confirmé par le graphe avec toutes les mesures.
+    De plus, la droite théorique est également très proche, ce qui indique que la mesure en faisant varier
+    le courant est très précise. \\ \\
+    Pour la variation de la longueur du fil, figure~\ref{fig:longueur}, la courbe de tendance est un peu
+    moins proche des mesures, tout comme la droite théorique, mais cela peut être mis sur le fait que la mesure
+    de la longueur du fil est lié au fabricant et donc potentiellement moins précis que la mesure du courant.\\
+    Pour la variation du nombre d'aimants, figure~\ref{fig:aimants}, les mesures semblent être plus dispersées,
+    surtout entre les 5 premières mesures et la 6ème.
+    Cela peut être attribué aux aimants qui serait mal centré ou qui ne serait pas parfaitement aligné
+    (mais on a répété plusieurs fois ces mesures avec les mêmes résultats, donc on doute que ce soit
+    la meilleure explication), ou, également plus ou moins lié à cela, le fait que l'on considère que
+    le champ magnétique est homogène.
+    Ces différences sont également visible sur la droite théorique, qui est faite en considérant que le champ
+    est strictement proportionnel au nombre d'aimants, ce qui ne semble pas être le cas.
+    Néanmoins, de part l'aspect proche entre cette dernière courbe et le point 2, il n'est pas à exclure les
+    hypothèses précédentes.\\ \\
+    Enfin, pour la variation de l'angle, figure~\ref{fig:angle}, nous pouvons voir que la courbe de tendance
+    colle bien aux mesures, et la relation de proportionnalité est parfaitement visible sur le graphe de la
+    force en fonction du sinus de l'angle.
+
+    \section{Conclusion}\label{sec:conclusion}
+
+    En conclusion, nous avons pu observer expérimentalement comment s'exerce la force de Laplace sur un fil
+    parcouru par un courant électrique, et nous avons pu constater que les résultats obtenus sont en accord
+    avec les prédictions théoriques.
+    L'expérience pourrait être améliorée, principalement en créant un champ magnétique plus homogène et
+    mieux contrôlé, afin d'améliorer la mesure.
+    Cela pourrait être fait en utilisant un électroaimant, ce qui améliorerait les deux points précédents.
+    De plus, créer un montage permettant de mieux observer la variation de la force selon la longueur du fil
+    pourrait être intéressant, comme c'est une des mesures pour laquelle on a le moins de points.
+    Malgré tout, cela demeure une expérience intéressante, et qui permet de bien comprendre le phénomène
+    de la force de Laplace.
+
+\end{document}

@@ -1,0 +1,397 @@
+%! Author = cqa
+%! Date = 02.05.23
+
+\documentclass[11pt]{article}
+% Basic Packages for Encoding (Input AND Output) and Langauge Support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Change Layout with a User-Friendly Interface
+\usepackage[margin=1in]{geometry}
+
+% Include Pictures with a User-Friendly Interface
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+
+% Extended Math Support from the Famous 'American Mathematical Society'
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% For physics
+\usepackage{physics}
+\usepackage[f]{esvect}
+
+% Just for Demonstration Purposes
+\usepackage[math]{blindtext}
+
+% For the chemistry
+\usepackage{chemist}
+
+% For use on computer
+\usepackage{hyperref}
+
+% For table color
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+
+% Tableau verticale
+\usepackage{rotating}
+
+% Figure dans figure
+\usepackage{subfig}
+
+% Multicolumn
+\usepackage{multirow}
+
+% Preuves
+\usepackage{amsthm}
+
+% Footnote
+\usepackage[bottom]{footmisc}
+
+% PsTricks
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pstricks-add}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage[space]{grffile} % For spaces in paths
+\usepackage{etoolbox} % For spaces in paths
+\makeatletter % For spaces in paths
+\patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+\makeatother
+
+\usepackage{auto-pst-pdf}
+
+% Graphiques
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+% Titre
+\usepackage[affil-it]{authblk}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\title{\textbf{TP Ondes stationnaires}}
+\author{Camille Yerly, Romain Blondel}
+\affil{2M8, Gymnase Auguste Piccard}
+
+% Document
+\begin{document}
+    \maketitle
+
+    \section{But}\label{sec:but}
+
+    Le but de ce TP est de comprendre le fonctionnement d'une onde, à l'aide d'une corde vibrante, en mesurant
+    les longueurs d'ondes et les fréquences pour les différents modes, afin de vérifier les formules de vitesse
+    des ondes.
+
+    \section{Introduction}\label{sec:introduction}
+
+    Les ondes stationnaires furent découvertes au 19\up{ème} siècle par Franz Melde.
+    Il développa une expérience semblable à celle que nous avons reproduit afin de les observer.
+    Les ondes stationnaires se forment lorsque deux ondes de même fréquence se superposent.
+    À l'œil humain, elles semblent figées dans leur milieu.
+    Pourtant, l'utilisation d'un stroboscope réglé à la même fréquence qu'elles, permet d'observer le
+    mouvement de celles-ci.
+    Dans l'expérience que nous avons mené, ces ondes stationnaires sont observées sur une corde.
+    Les ondes progressives produites au départ se réfléchissant aux extrémités de la corde.
+    Ainsi, en réglant la fréquence de ces ondes, il est possible de trouver des ondes stationnaires.\\
+    Dans le cas d'une corde, elles sont caractérisées par des points particuliers: des nœuds et des ventres.
+    Les nœuds représentant une superposition nulle des ondes et les ventres une superposition minimale ou
+    maximale.
+    Le nombre de ventres nous donne le mode de vibration.\\
+    Les ondes stationnaires se trouvent dans beaucoup de phénomènes vibratoires au quotidien.
+    Elles sont omniprésentes dans la musique, de nombreux instruments de musiques acoustiques illustrent
+    ce principe; le fonctionnement d'une corde de violon ou d'un tuyau d'orgue par exemple.\\
+    Dans ce travail pratique, nous avons cherché à vérifier expérimentalement la formule de la célérité
+    des ondes stationnaires basée sur les caractéristiques de la corde en la comparant à la formule basique
+    avec la fréquence et la longueur d'onde.\\
+    La vitesse des ondes se calcule avec la longueur d'ondes $\lambda$ $[m]$ et la fréquence $f$ $[Hz]$
+    selon la formule:
+    \[c=\lambda \cdot f\]
+    Dans le cas des ondes stationnaires sur une corde, il est aussi possible d'utiliser une formule basée
+    uniquement sur les caractéristiques de la corde: la tension de la corde $F$ $[N]$ et sa masse linéaire
+    $[\mu]$, c'est-à-dire sa masse $[kg]$ par mètre $[m]$, tel que:
+    \[c=\sqrt{\dfrac{F}{\mu}}\]
+
+    La démonstration de cette formule est assez intéressante.
+    Prenons un tronçon de corde infinitésimal $AB$ avec $A(x;y)$ et $B(x+\dd{x};y+\dd{y})$, et l'angle entre la tangente
+    à la corde et l'horizontal en ce point au temps $t$ donné par $\alpha (x,t)$ (respectivement $\alpha (x+\dd{x},t)$).
+    En négligeant la force pesante, on a uniquement la force de tension qui agit sur la corde, $\vv*{T}{A}$ en $A$
+    et $\vv*{T}{B}$ en $B$.
+    \input{ext/onde-corde}
+    Connaissant la masse linéique de la corde $\mu$, on peut écrire la relation suivante:
+    \[
+        \vv*{T}{A} + \vv*{T}{B} = \mu \dd{x} \vec{a}
+    \]
+    où $\vec{a} = \mqty(\pdv[2]{x}{t} \\ \pdv[2]{y}{t}) = \mqty(0 \\ \pdv[2]{y}{t}) $ est l'accélération de la corde
+    (nulle horizontalement, car il n'y a qu'un déplacement vertical).
+    On peut décomposer l'équation en deux équations, une selon l'axe horizontal $Ox$ et une selon l'axe verticale $Oy$.
+    \[
+        \begin{cases}
+            Ox \ : \ - T_A \cos \alpha (x,t) + T_B \cos \alpha (x+\dd{x},t) = 0 \\
+            Oy \ : \ - T_A \sin \alpha (x,t) + T_B \sin \alpha (x+\dd{x},t) = \mu \dd{x} \pdv[2]{y}{t}
+        \end{cases}
+    \]
+    En utilisant les approximations du premier ordre $\sin \alpha \approx \alpha$ et $\cos \alpha \approx 1$, si l'on
+    considère la variation crée par l'onde et donc les angles comme faibles, on obtient:
+    \[
+        \begin{cases}
+            Ox \ : \ - T_A + T_B = 0 \\
+            Oy \ : \ - T_A \alpha (x,t) + T_B \alpha (x+\dd{x},t) = \mu \dd{x} \pdv[2]{y}{t}
+        \end{cases}
+        \Rightarrow
+        \begin{cases}
+            T_A = T_B = T \\
+            - T \alpha (x,t) + T \alpha (x+\dd{x},t) = \mu \dd{x} \pdv[2]{y}{t}
+        \end{cases}
+    \]
+    De plus, nous pouvons considérer que $\alpha = \tan \alpha = \pdv{y}{x}$, d'où:
+    \[
+        -T \pdv{y}{x} \left( x,t \right) + T \pdv{y}{x} \left( x+\dd{x},t \right) = \mu \dd{x} \pdv[2]{y}{t} \left( x,t \right)
+    \]
+    En notant que
+    \[
+        \pdv{y}{x} \left( x+\dd{x},t \right) - \pdv{y}{x} \left( x,t \right) =
+        \pdv{x} \left( y(x+\dd{x},t) - y(x,t) \right) = \pdv{x} \left(  \pdv{y}{x} \left( x,t \right) \dd{x} \right) =
+        \pdv[2]{y}{x} \dd{x}
+    \]
+    on obtient
+    \[
+        T \pdv[2]{y}{x} \dd{x} = \mu \dd{x} \pdv[2]{y}{t} \Leftrightarrow \pdv[2]{y}{x} - \frac{\mu}{T} \pdv[2]{y}{t} = 0
+    \]
+    qui est une équation d'onde, ou équation de d'Alembert, de forme
+    \[
+        \pdv[2]{y}{x} - \frac{1}{c^2} \pdv[2]{y}{t} = 0
+    \]
+    où $c = \sqrt{\frac{T}{\mu}}$ est la célérité de l'onde.
+    On peut également noter que la solution générale de cette équation qui nous intéresse est de la forme
+    \[
+        y(x,t) = A \cos \left( \omega t + \phi \right) \cos \left( kx + \psi \right)
+    \]
+    et via les conditions de bord $y(0,t)=0$ et $y(L,t)=0$, où L est la longueur de la corde, on obtient que
+    $\psi = \frac{\pi}{2}$, donc on peut transformer le cosinus en sinus, et $k = \frac{n \pi}{L}$, où
+    $n \in \mathbb{N}$.
+    Finalement, on obtient une équation de la forme
+    \[
+        y(x,t) = A \cos \left( \omega t + \phi \right) \sin \left( \frac{n \pi}{L} x \right)
+    \]
+    avec $A$ l'amplitude de l'onde, $\omega$ la pulsation, $\phi$ la phase et $n$ le mode de vibration.
+    On voit également que cette équation peut être écrite de manière indépendante du temps, sous la forme
+    \[
+        y(x) = A \sin \left( \frac{n \pi}{L} x \right)
+    \]
+    qui est la forme générale d'une onde stationnaire, utile à la visualisation des modes de vibration.
+
+    \section{Principe de mesure et description}\label{sec:principe-de-mesure-et-description}
+
+    \subsection{Matériel}\label{subsec:materiel}
+
+    \begin{itemize}
+        \item Corde
+        \item Vibreur
+        \item Générateur de fonction
+        \item Multimètre réglé pour mesurer la fréquence
+        \item Coinceur et poulie pour la corde
+        \item Plusieurs masses
+        \item Serre-joint
+        \item Balance
+        \item Mètre
+    \end{itemize}
+
+    \subsection{Déroulement}\label{subsec:deroulement}
+
+    \begin{enumerate}
+        \item Tout d'abord, nous avons relevé la masse de la corde, à l'aide de la balance.
+        \item Nous avons fait passer la corde dans le vibreur, puis avons réglé sa hauteur sur la table à
+            l'aide du coinceur et de la poulie.
+        \item Nous avons ensuite, fixé les masses au bout de la corde, du côté de la poulie, afin de la
+            tendre.
+            Ainsi, en changeant les masses, il était possible de changer la tension de la corde.
+        \item Avec une masse de 110 [g], nous avons cherché les modes 3, 5 et 7 (Un contrepoids de 110 [g]
+            était idéal afin de trouver les différents modes, car il permettait d'avoir une corde ni trop ni
+            trop peu tendue).
+            Les modes impairs étant plus facilement observables que les modes paires.
+            Nous avons mesuré la longueur d'onde avec le mètre (mesure de la distance entre trois nœuds) et
+            avons relevé la fréquence d'oscillation du vibreur avec le multimètre pour chacun des trois modes.
+        \item Puis, nous avons fait varier le contrepoids entre 60 [g] et 360 [g] avec des écarts de 50 [g]
+            en mesurant a longueur d'onde et la fréquence pour les modes 5 et 7 à chaque fois.
+    \end{enumerate}
+
+    \subsection{Schéma}\label{subsec:schema}
+    
+    \input{ext/schem}
+
+    \section{Résultats et calculs}\label{sec:resultats-et-calculs}
+
+    Ci-suit les résultats obtenus lors de l'expérience, ainsi que les différents calculs effectués.
+    Pour commencer, nous avons mesuré la masse de la corde, ainsi que sa longueur totale, afin de pouvoir calculer
+    la masse linéaire $\mu$ de la corde: elle pèse $M \approx 4 \ [g]$ et mesure $l \approx 2.638 \ [m]$, d'où
+    $\mu = \frac{m}{L} \approx 1.516 \cdot 10^{-3} \ \left[\frac{kg}{m}\right]$.\\
+    De plus, la longueur de la corde qui vibre est de $L \approx 1.475 \ [m]$.
+    De celle-ci, nous pouvons représenter les différents modes de vibration, en fonction de la position $x$ sur la
+    corde, comme illustré sur la Figure~\ref{fig:waves}.
+    Pour ce faire, nous avons utilisé la formule $y(x) = A \sin \left( \frac{n \pi}{L} x \right)$, où $n$ est le mode
+    de vibration et $A$ l'amplitude de l'onde, que nous avons fixé à $1$.
+    Sur le graphe sont représentés les modes $n=3,5,7$, car ce sont les modes les plus facilement observables (car
+    les modes paires paraissent instable à l'œil).
+    De plus on y a ajouté les nœuds, qui sont les points où l'amplitude de l'onde est nulle, et donc une référence
+    fixe afin de mesurer la longueur d'onde $\lambda$, qui correspond à l'espace entre trois nœuds, car cela
+    correspond à un ventre en haut et un autre en bas, soit un cycle complet.
+
+    \begin{figure}[H]
+        \centering
+        \resizebox{1.0\textwidth}{!}{\input{ext/waves}}
+        \caption{Ondes stationnaires selon différents modes.}
+        \label{fig:waves}
+    \end{figure}
+
+    Ensuite, nous avons consigné nos mesures, ainsi que les quelques résultats de calculs nécessaires au traitement
+    de ces données, dans la Table~\ref{tab:mesure}.\\
+    Dans la première colonne est notée la masse du contrepoids $m$, en gramme, qui est utilisé pour tendre la corde.
+    Juste à côté est consignée la tension $T$ de la corde, en Newton, qui est égale à la force pesante du contrepoids,
+    $F_P = T = m \cdot g$, avec $g$ est l'accélération terrestre, qui vaut $9.81 \ \left[\frac{m}{s^2}\right]$.\\
+    Les deux colonnes suivantes contiennent la fréquence $f$ de vibration de la corde, en Hertz, ainsi que le mode
+    $n$ de vibration, qui est le nombre de ventres présents sur la corde.
+    Ce sont les deux valeurs mesurées à proprement parler lors de l'expérience, avec la longueur d'onde.\\
+    Celle-ci est consignée dans la colonne suivante, en mètre, et est consignée sous le symbole $\lambda$ pour celle
+    que nous avons mesurée, et $\lambda_{th}$ pour celle que nous avons calculée théoriquement, via la formule
+    $\lambda_{th} = \frac{2L}{n}$, où $L$ est la longueur de la corde qui vibre et $n$ le mode de vibration.\\
+    Enfin, les trois dernières colonnes contiennent la célérité calculée via les différentes formules, soit
+    $c = f \cdot \lambda$, $c_{th_1} = \sqrt{\frac{T}{\mu}}$ et $c_{th_2} = f \cdot \lambda_{th}$, en mètre par
+    seconde.
+
+    \begin{table}[H]
+    \rowcolors{1}{lightgray}{} % Coloration des lignes
+    \centering
+        \begin{tabular}{|c|c||c|c||c|c||c|c|c|}
+            \hline
+            \rowcolor{gray} $m \ [g]$ & $T \ [N]$ & $f \ [Hz]$ & $n$ & $\lambda \ [m]$ & $\lambda_{th} \ [m]$ & $c \ \left[\frac{m}{s}\right]$ & $c_{th_1} \ \left[\frac{m}{s}\right]$ & $c_{th_2} \ \left[\frac{m}{s}\right]$ \\
+            \hline
+            110 & 1.079 & 45.65 & 5 & 0.590 & 0.590 & 26.93 & 26.68 & 26.93 \\
+            \hline
+            110 & 1.079 & 64.22 & 7 & 0.425 & 0.421 & 27.29 & 26.68 & 27.06 \\
+            \hline
+            110 & 1.079 & 26.26 & 3 & 1.010 & 0.983 & 26.52 & 26.68 & 25.82 \\
+            \hline
+            110 & 1.079 & 56.06 & 6 & 0.480 & 0.491 & 26.91 & 26.68 & 27.56 \\
+            \hline
+            60 & 5.886 & 34.00 & 5 & 0.585 & 0.590 & 19.89 & 19.70 & 20.06 \\
+            \hline
+            60 & 5.886 & 45.46 & 7 & 0.450 & 0.421 & 20.46 & 19.70 & 19.16 \\
+            \hline
+            160 & 1.570 & 57.09 & 5 & 0.587 & 0.590 & 33.51 & 32.17 & 33.68 \\
+            \hline
+            160 & 1.570 & 78.04 & 7 & 0.420 & 0.421 & 32.78 & 32.17 & 32.89 \\
+            \hline
+            210 & 2.060 & 64.06 & 5 & 0.565 & 0.590 & 36.19 & 36.86 & 37.80 \\
+            \hline
+            210 & 2.060 & 90.00 & 7 & 0.410 & 0.421 & 36.90 & 36.86 & 37.93 \\
+            \hline
+            260 & 2.551 & 67.71 & 5 & 0.590 & 0.590 & 39.95 & 41.01 & 39.95 \\
+            \hline
+            260 & 2.551 & 97.00 & 7 & 0.405 & 0.421 & 39.29 & 41.01 & 40.88 \\
+            \hline
+            310 & 3.041 & 75.90 & 5 & 0.590 & 0.590 & 44.78 & 44.78 & 44.78 \\
+            \hline
+            310 & 3.041 & 108.6 & 7 & 0.400 & 0.421 & 43.44 & 44.78 & 45.77 \\
+            \hline
+            360 & 3.532 & 82.00 & 5 & 0.580 & 0.590 & 47.56 & 48.26 & 48.38 \\
+            \hline
+            360 & 3.532 & 116.9 & 7 & 0.415 & 0.421 & 48.51 & 48.26 & 49.27 \\
+            \hline
+        \end{tabular}
+        \caption{Mesures et calculs.}
+        \label{tab:mesure}
+        \rowcolors{1}{white}{} % Coloration des lignes
+    \end{table}
+
+    Finalement, nous avons représenté graphiquement les célérités calculées en fonction de la masse du contrepoids
+    utilisé pour tendre la corde, dans la Figure~\ref{fig:lambda}.
+    En plus des trois séries de points, nous avons également représenté la courbe correspondant à la célérité
+    $c_{th} = \sqrt{\frac{T}{\mu}}$.
+
+    \begin{figure}[H]
+        \centering
+        \input{ext/mes_vit}
+        \caption{Célérité en fonction de la masse.}
+        \label{fig:lambda}
+    \end{figure}
+
+    \subsection{Incertitudes}
+
+    Les plus grandes sources d'incertitudes se trouvent dans la mesure de la fréquence et de la longueur d'onde.
+    L'incertitude sur la fréquence est très faible sur la lecture de l'appareil, mais la fréquence dans laquelle
+    il est possible de trouver un mode spécifique varie d'environ $1$ $[Hz]$.
+    Les fréquences allant de 45.7 $[Hz]$ à 116.9 $[Hz]$ l'incertitude varie entre $2.2\%$ et
+    $0.9\%$ ($\dfrac{1}{65}=1.5\%$, $65$ $[Hz]$ étant une fréquence typique).
+    L'incertitude sur la longueur d'onde quant à elle est de l'ordre de $1\%$, ($\dfrac{0.005}{0.45}=1.1\%$).
+    Ainsi l'incertitude sur la célérité calculée selon ces paramètres,  $c=\lambda \cdot f$, est de l'ordre de
+    $3\%$ ($1.5+1.1=2.6$).\\ Par contre, l'incertitude sur le calcul basée sur les caractéristiques de la corde,
+    $c=\sqrt{\dfrac{F}{\mu}}$, est bien plus faible, de l'ordre de $0.2\%$.
+    Ceci s'explique par une mesure précise de la masse linéaire de la corde.
+    En comparant la célérité obtenue par les deux calculs, nous constatons que l'erreur ne dépasse pas l'écart
+    imposé par l'incertitude.
+    Nous pouvons donc dire que les mesures sont satisfaisantes.
+
+    \section{Discussion des résultats}\label{sec:discussion-des-resultats}
+
+    Nous pouvons voir que les célérités calculées via les différentes formules sont très proches les unes des autres,
+    ce qui semble indiquer que les formules utilisées sont correctes.
+    Tout d'abord, notons que malgré la difficulté à observer les modes pairs, nous avons tout de même pu avoir une
+    mesure pour $n=6$.\\ \\
+    Ensuite, nous observons sur la Figure~\ref{fig:lambda} que les célérités calculées via les propriétés de la corde
+    ($c = \sqrt{\frac{T}{\mu}}$) sont très proches de la célérité mesurée ($c=f \cdot \lambda $) et celle calculée
+    selon les conditions de l'expérience ($c = f \cdot \lambda_{th} $).
+    La tendance générale est que celle mesurée est légèrement plus faible, et celle via les conditions de l'expérience
+    légèrement plus élevée.
+    Cela peut s'expliquer par plusieurs facteurs.\\ \\
+    Tout d'abord à propos de la célérité propre aux propriétés de la corde, il faut tout d'abord mentionné que
+    c'est un résultat admettant plusieurs hypothèses et approximations (voir Section~\ref{sec:introduction}), comme
+    négliger la pesanteur, une tension uniforme, une perturbation de faible amplitude, etc.\\
+    De plus, il faut noter que la masse linéique de la corde est calculée via la mesure de la masse de la corde,
+    soumise à peu d'erreur, néanmoins le nombre de chiffres significatif est limité par la précision de la balance.
+    D'un autre côté, la mesure de la longueur de la corde est également soumise à de l'erreur, donc la masse linéique
+    comporte plusieurs sources d'erreur.\\
+    Enfin, la tension sur la corde est peut-être légèrement différente de celle calculée, car la masse du contrepoids
+    n'est pas vérifiée et peut être que le montage modifie légèrement la tension, via par exemple la poulie qui
+    induit une force de frottement.\\ \\
+    Ensuite, à propos de la célérité propre aux conditions de l'expérience, la principale source d'erreur est le
+    montage de l'expérience.
+    En effet, on a mesuré la distance entre la poulie et le vibreur en considérant que ce sont les bords de la corde
+    qui crée l'onde et que ceux-ci sont fixes afin d'avoir la longueur $L$, or le vrai point fixe et le coinceur,
+    le vibreur est néanmoins une bonne approximation de part sa fréquence élevée.\\ \\
+    Finalement, la mesure de la longueur d'onde est assez approximative, car on ne peut pas coller la règle à la corde
+    et il faut donc estimer la position du nœud.
+    De plus, la fréquence est réglée manuellement via un générateur de fonction, dont le réglage se fait via une
+    molette, ce qui n'est pas forcément très précis.
+
+    \section{Conclusion}\label{sec:conclusion}
+
+    En conclusion, nous sommes satisfaits des résultats obtenus, car ils sont cohérents avec les formules utilisées.
+    L'expérience est très intéressante, car elle permet de visualiser les ondes stationnaires, et de plus elle permet
+    de mettre en évidence que l'on peut calculer la célérité d'une onde en connaissant uniquement les propriétés
+    de la corde, ce qui est très pratique, par exemple cela explique comment fonctionne un instrument à corde, et
+    pourquoi il faut tendre ou détendre la corde pour l'accorder.
+    Le montage pourrait néanmoins être amélioré, par exemple en créant la tension dans la corde via un système de
+    mesure de la force, afin d'avoir une tension plus précise, ainsi qu'une fixation plus précise que la poulie pour
+    mesurer la longueur de la corde.
+    Deuxièmement, on pourrait attacher la corde au vibreur afin d'être plus exact sur la longueur de la corde.
+    Ensuite, on pourrait utiliser un générateur de fonction avec un réglage plus fin, que l'on pourrait même
+    brancher à un stroboscope afin de pouvoir le synchroniser avec la fréquence de l'onde et ainsi fixer l'onde
+    et pouvoir mesurer la longueur d'onde plus précisément.
+    Finalement, on pourrait monter le toute sur un support afin de pouvoir mesurer les longueurs d'onde de manière
+    plus précise, et ainsi avoir une meilleure précision sur la célérité, par exemple en utilisant deux lasers que
+    l'on pointerait sur les nœuds afin de mesurer précisément leur écartement.
+    Malgré tout, cela demeurera une expérience très intéressante dans l'étude des ondes stationnaires.
+
+\end{document}

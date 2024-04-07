@@ -1,0 +1,127 @@
+%! Author = cqa
+%! Date = 02.05.23
+
+\documentclass[11pt]{article}
+% Basic Packages for Encoding (Input AND Output) and Langauge Support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Change Layout with a User-Friendly Interface
+\usepackage[margin=1in]{geometry}
+
+% Include Pictures with a User-Friendly Interface
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+
+% Extended Math Support from the Famous 'American Mathematical Society'
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Just for Demonstration Purposes
+\usepackage[math]{blindtext}
+
+% For the chemistry
+\usepackage{chemist}
+
+% For use on computer
+\usepackage{hyperref}
+
+% For table color
+\usepackage{xcolor,colortbl}
+
+% Tableau verticale
+\usepackage{rotating}
+
+% Figure dans figure
+\usepackage{subfig}
+
+% Multicolumn
+\usepackage{multirow}
+
+% Preuves
+\usepackage{amsthm}
+
+% Footnote
+\usepackage[bottom]{footmisc}
+
+% PsTricks
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pstricks-add}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage[space]{grffile} % For spaces in paths
+\usepackage{etoolbox} % For spaces in paths
+\makeatletter % For spaces in paths
+\patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+\makeatother
+
+\usepackage{auto-pst-pdf}
+
+% Graphiques
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+% Titre
+\usepackage[affil-it]{authblk}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\title{\textbf{TP Force de Laplace}}
+\author{Camille Yerly, Romain Blondel}
+\affil{2M8, Gymnase Auguste Piccard}
+
+% Document
+\begin{document}
+    \maketitle
+
+    \section{But}\label{sec:but}
+
+
+    \section{Introduction}\label{sec:introduction}
+
+
+    \section{Principe de mesure et description}\label{sec:principe-de-mesure-et-description}
+
+    \subsection{Matériel}\label{subsec:materiel}
+
+    \subsection{Déroulement}\label{subsec:deroulement}
+
+    \subsection{Schémas}\label{subsec:schemas}
+
+
+    \section{Résultats et calculs}\label{sec:resultats-et-calculs}
+    
+    \begin{figure}[H]
+        \centering
+        \input{ext/cour_cor}
+        \caption{Mesure de la force de Laplace en fonction de l'intensité du courant}
+        \label{fig:courant}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \subfloat[Courant croissant]{
+            \input{ext/cour}
+        }
+        \subfloat[Courant décroissant]{
+            \input{ext/cour_all}
+        }
+        \caption{Mesure de la force de Laplace en fonction de l'intensité du courant}
+        \label{fig:courant-plus}
+    \end{figure}
+
+    \section{Discussion des résultats}\label{sec:discussion-des-resultats}
+
+
+    \section{Conclusion}\label{sec:conclusion}
+
+\end{document}

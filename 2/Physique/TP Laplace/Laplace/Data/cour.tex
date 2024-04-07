@@ -1,0 +1,78 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray178}{RGB}{178,178,178}
+\definecolor{firebrick166640}{RGB}{166,6,40}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{silver188}{RGB}{188,188,188}
+\definecolor{slategray122104166}{RGB}{122,104,166}
+\definecolor{steelblue52138189}{RGB}{52,138,189}
+\definecolor{whitesmoke238}{RGB}{238,238,238}
+
+\begin{axis}[
+axis background/.style={fill=whitesmoke238},
+axis line style={silver188},
+height=8cm,
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204,
+  fill=whitesmoke238
+},
+tick pos=left,
+width=8cm,
+x grid style={darkgray178},
+xlabel={Courant \(\displaystyle [A]\)},
+xmajorgrids,
+xmin=-0.5, xmax=0.5,
+xtick style={color=black},
+y grid style={darkgray178},
+ylabel={Force \(\displaystyle [N]\)},
+ymajorgrids,
+ymin=-0.003517866, ymax=0.003517866,
+ytick style={color=black}
+]
+\addplot [thick, steelblue52138189, mark=x, mark size=3, mark options={solid}, only marks]
+table {%
+-0.5 -0.00304114818572998
+-0.450000047683716 -0.00284492969512939
+-0.399999976158142 -0.00255060195922852
+-0.350000023841858 -0.00235438346862793
+-0.299999952316284 -0.00206005573272705
+-0.25 -0.00156962871551514
+-0.200000047683716 -0.00117719173431396
+-0.149999976158142 -0.000980973243713379
+-0.100000023841858 -0.000588655471801758
+-0.0499999523162842 -0.000196218490600586
+0 0
+0.0499999523162842 0.000294327735900879
+0.100000023841858 0.000588655471801758
+0.149999976158142 0.000882863998413086
+0.200000047683716 0.00117719173431396
+0.25 0.00156962871551514
+0.299999952316284 0.00196194648742676
+0.350000023841858 0.00215816497802734
+0.399999976158142 0.00255060195922852
+0.450000047683716 0.00284492969512939
+0.5 0.00313925743103027
+};
+\addlegendentry{Mesures}
+\addplot [thick, firebrick166640]
+table {%
+-0.5 -0.00315701961517334
+0.5 0.00315701961517334
+};
+\addlegendentry{$F = 0.006 \cdot I$}
+\addplot [thick, slategray122104166, dashed]
+table {%
+-0.5 -0.00319802761077881
+0.5 0.00319802761077881
+};
+\addlegendentry{$F = I \cdot L \cdot B$}
+\end{axis}
+
+\end{tikzpicture}

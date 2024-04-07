@@ -1,0 +1,78 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray178}{RGB}{178,178,178}
+\definecolor{firebrick166640}{RGB}{166,6,40}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{silver188}{RGB}{188,188,188}
+\definecolor{slategray122104166}{RGB}{122,104,166}
+\definecolor{steelblue52138189}{RGB}{52,138,189}
+\definecolor{whitesmoke238}{RGB}{238,238,238}
+
+\begin{axis}[
+axis background/.style={fill=whitesmoke238},
+axis line style={silver188},
+height=9cm,
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204,
+  fill=whitesmoke238
+},
+tick pos=left,
+width=16cm,
+x grid style={darkgray178},
+xlabel={Courant \(\displaystyle [A]\)},
+xmajorgrids,
+xmin=-5, xmax=5,
+xtick style={color=black},
+y grid style={darkgray178},
+ylabel={Force \(\displaystyle [N]\)},
+ymajorgrids,
+ymin=-0.0356034202597424, ymax=0.03546582545459,
+ytick style={color=black}
+]
+\addplot [thick, steelblue52138189, mark=x, mark size=3, mark options={solid}, only marks]
+table {%
+-5 -0.0323729515075684
+-4.5 -0.0291357040405273
+-4 -0.0259964466094971
+-3.5 -0.0228573083877563
+-3 -0.0196199417114258
+-2.5 -0.0163826942443848
+-2 -0.0131454467773438
+-1.5 -0.00990808010101318
+-1 -0.00647461414337158
+-0.5 -0.00304114818572998
+0 0
+0.5 0.00313925743103027
+1 0.00637650489807129
+1.5 0.0096137523651123
+2 0.0127530097961426
+2.5 0.0159902572631836
+3 0.0191295146942139
+3.5 0.0224648714065552
+4 0.0255060195922852
+4.5 0.0287432670593262
+5 0.0319806337356567
+};
+\addlegendentry{Mesures}
+\addplot [thick, firebrick166640]
+table {%
+-5 -0.0322353839874268
+5 0.0322353839874268
+};
+\addlegendentry{$F = 0.006 \cdot I$}
+\addplot [thick, slategray122104166, dashed]
+table {%
+-5 -0.0319806337356567
+5 0.0319806337356567
+};
+\addlegendentry{$F = I \cdot L \cdot B$}
+\end{axis}
+
+\end{tikzpicture}

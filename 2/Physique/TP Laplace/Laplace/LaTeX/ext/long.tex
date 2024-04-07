@@ -1,0 +1,63 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray178}{RGB}{178,178,178}
+\definecolor{firebrick166640}{RGB}{166,6,40}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{silver188}{RGB}{188,188,188}
+\definecolor{slategray122104166}{RGB}{122,104,166}
+\definecolor{steelblue52138189}{RGB}{52,138,189}
+\definecolor{whitesmoke238}{RGB}{238,238,238}
+
+\begin{axis}[
+axis background/.style={fill=whitesmoke238},
+axis line style={silver188},
+height=9cm,
+legend cell align={left},
+legend style={
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.03,0.97)},
+  anchor=north west,
+  draw=lightgray204,
+  fill=whitesmoke238
+},
+tick pos=left,
+width=16cm,
+x grid style={darkgray178},
+xlabel={Longueur \(\displaystyle [cm]\)},
+xmajorgrids,
+xmin=1.2, xmax=8.4,
+xtick style={color=black},
+y grid style={darkgray178},
+ylabel={Force \(\displaystyle [N]\)},
+ymajorgrids,
+ymin=0.275669686985619, ymax=3.450936573302,
+ytick style={color=black}
+]
+\addplot [thick, steelblue52138189, mark=x, mark size=3, mark options={solid}, only marks]
+table {%
+1.20000004768372 0.419999957084656
+2.20000004768372 0.889999985694885
+3.20000004768372 1.30999994277954
+4.19999980926514 1.74000000953674
+6.40000009536743 2.5
+8.39999961853027 3.25999999046326
+};
+\addlegendentry{Mesures}
+\addplot [thick, firebrick166640]
+table {%
+1.20000004768372 0.47237229347229
+8.39999961853027 3.30660629272461
+};
+\addlegendentry{$F = 0.394 \cdot L$}
+\addplot [thick, slategray122104166, dashed]
+table {%
+1.20000004768372 0.456865787506104
+8.39999961853027 3.19806003570557
+};
+\addlegendentry{$F = I \cdot L \cdot B$}
+\end{axis}
+
+\end{tikzpicture}

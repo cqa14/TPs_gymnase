@@ -1,0 +1,56 @@
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{pstricks-add}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+% \usepackage[space]{grffile} % For spaces in paths
+% \usepackage{etoolbox} % For spaces in paths
+% \makeatletter % For spaces in paths
+% \patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+% \makeatother
+% 
+\begin{figure}[H]
+\centering
+\psscalebox{0.9 0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-5.73)(7.47,1.37)
+\definecolor{colour0}{rgb}{0.7019608,0.7019608,0.7019608}
+\definecolor{colour1}{rgb}{0.4,0.4,0.4}
+\definecolor{colour2}{rgb}{0.2,0.2,0.2}
+\definecolor{colour3}{rgb}{0.8,0.8,0.8}
+\definecolor{colour4}{rgb}{0.6,0.6,0.6}
+\psframe[linecolor=colour0, linewidth=0.04, fillstyle=solid,fillcolor=colour0, dimen=outer](3.52,-5.31)(0.54,-5.71)
+\psframe[linecolor=colour0, linewidth=0.04, fillstyle=solid,fillcolor=colour0, dimen=outer](2.66,1.11)(2.4,-5.35)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=black, dimen=outer](3.94,-3.59)(2.14,-4.01)
+\psframe[linecolor=colour1, linewidth=0.04, fillstyle=solid,fillcolor=colour1, dimen=outer](5.76,-3.69)(3.94,-3.89)
+\psframe[linecolor=yellow, linewidth=0.04, fillstyle=solid,fillcolor=yellow, dimen=outer](5.84,-3.61)(5.74,-4.69)
+\psframe[linecolor=black, linewidth=0.01, fillstyle=solid,fillcolor=red, dimen=outer](5.7,-4.33)(5.52,-4.97)
+\psframe[linecolor=black, linewidth=0.01, fillstyle=solid, dimen=outer](6.1,-4.34)(5.92,-4.97)
+\psframe[linecolor=colour2, linewidth=0.04, fillstyle=solid,fillcolor=colour2, dimen=outer](6.1,-4.85)(5.49,-5.2)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=colour0, dimen=outer](6.38,-5.17)(5.2,-5.27)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=black, dimen=outer](6.7,-5.23)(4.9,-5.73)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=gradient, gradlines=2000, dimen=outer](6.12,-5.39)(5.52,-5.63)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=colour3, dimen=outer](5.92,0.93)(4.44,-2.13)
+\psframe[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=black, dimen=outer](5.64,0.51)(4.74,-0.11)
+\pscircle[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=colour4, dimen=outer](5.565,-0.675){0.155}
+\pscircle[linecolor=black, linewidth=0.04, fillstyle=solid,fillcolor=colour4, dimen=outer](5.585,-1.195){0.155}
+\psbezier[linecolor=blue, linewidth=0.04](5.06,-1.81)(3.94,-2.15)(1.56,-0.99)(4.44,-3.69)
+\psbezier[linecolor=red, linewidth=0.04](5.54,-1.69)(5.54,-2.49)(3.14,-0.93)(4.8,-3.71)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(0.72,0.75)(2.26,-0.15)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(6.1,-3.39)(5.92,-3.95)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(6.64,-4.21)(6.2,-4.57)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(4.48,-4.77)(4.82,-5.15)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(3.64,1.05)(4.32,0.11)
+\psline[linecolor=black, linewidth=0.04, arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.0]{->}(1.34,-2.77)(3.76,-3.53)
+\rput[bl](0.0,0.77){Statif}
+\rput[bl](0.32,-2.79){Support}
+\rput[bl](5.56,-3.41){Plaque}
+\rput[bl](2.84,1.09){Générateur}
+\rput[bl](6.28,-4.15){Aimant}
+\rput[bl](3.72,-4.73){Balance}
+\end{pspicture}
+}
+\caption{Schéma du montage principal}
+\label{fig:schema-principal}
+\end{figure}
+
