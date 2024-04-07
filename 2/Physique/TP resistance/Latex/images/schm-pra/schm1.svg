@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="193 109.5 538.5 290" xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw" version="1.1" baseProfile="full">
+    <g>
+        <g latexdraw:type="rectangle" id="id1049234729">
+            <rect x="363.5" y="130.5" width="347.0" height="248.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="#ffe699"/>
+        </g>
+        <g id="id418833305" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(393.0 205.24865490807193)">
+            <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="0.0" x2="50.248654908071956" y1="-0.0" y2="-0.0"/>
+                <line x1="0.0" x2="50.248654908071956" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                <line x1="0.0" x2="50.248654908071956" y1="-50.248654908071934" y2="-50.248654908071934"/>
+            </g>
+        </g>
+        <g latexdraw:type="circle" id="id1803628084">
+            <circle cx="393.0" cy="156.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id2113395344">
+            <circle cx="417.0" cy="156.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1387791691">
+            <circle cx="444.0" cy="156.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1410631835">
+            <circle cx="394.0" cy="180.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id665104373">
+            <circle cx="418.0" cy="180.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id160187367">
+            <circle cx="443.0" cy="181.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1904503764">
+            <circle cx="395.0" cy="206.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id896472882">
+            <circle cx="419.0" cy="206.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1448930934">
+            <circle cx="443.0" cy="205.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="drawing" id="id1261780676">
+            <g id="id1978494081" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(392.0 278.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1924769345">
+                <circle cx="392.0" cy="229.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id216110142">
+                <circle cx="416.0" cy="229.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id768838964">
+                <circle cx="443.0" cy="229.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id860120427">
+                <circle cx="393.0" cy="253.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id217073388">
+                <circle cx="417.0" cy="253.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id204497704">
+                <circle cx="442.0" cy="254.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1027335607">
+                <circle cx="394.0" cy="279.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id759476294">
+                <circle cx="418.0" cy="279.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id588076068">
+                <circle cx="442.0" cy="278.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g latexdraw:type="drawing" id="id1423305716">
+            <g id="id741034574" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(393.0 350.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.248654908071956" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1323242529">
+                <circle cx="393.0" cy="301.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1175542588">
+                <circle cx="417.0" cy="301.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id259296174">
+                <circle cx="444.0" cy="301.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2046548276">
+                <circle cx="394.0" cy="325.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1328788534">
+                <circle cx="418.0" cy="325.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id53993047">
+                <circle cx="443.0" cy="326.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id674565220">
+                <circle cx="395.0" cy="351.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id262160943">
+                <circle cx="419.0" cy="351.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1566623209">
+                <circle cx="443.0" cy="350.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g id="id2099627948" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(474.0 207.24865490807193)">
+            <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+            </g>
+        </g>
+        <g latexdraw:type="circle" id="id1408093541">
+            <circle cx="474.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id2052457895">
+            <circle cx="498.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id839819346">
+            <circle cx="525.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id868544087">
+            <circle cx="475.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id622443089">
+            <circle cx="499.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id838867738">
+            <circle cx="524.0" cy="183.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1039108978">
+            <circle cx="476.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1816269994">
+            <circle cx="500.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1502560117">
+            <circle cx="524.0" cy="207.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="drawing" id="id207699957">
+            <g id="id1612217716" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(473.0 280.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1624116031">
+                <circle cx="473.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1844616243">
+                <circle cx="497.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id912675817">
+                <circle cx="524.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id355888012">
+                <circle cx="474.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id87100902">
+                <circle cx="498.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2094729847">
+                <circle cx="523.0" cy="256.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2024204062">
+                <circle cx="475.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1584044429">
+                <circle cx="499.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1396306331">
+                <circle cx="523.0" cy="280.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g latexdraw:type="drawing" id="id1744617446">
+            <g id="id1997914425" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(474.0 352.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id944002770">
+                <circle cx="474.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id854066854">
+                <circle cx="498.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id784440393">
+                <circle cx="525.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2005179553">
+                <circle cx="475.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1835841093">
+                <circle cx="499.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id532889720">
+                <circle cx="524.0" cy="328.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1027777565">
+                <circle cx="476.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1861244544">
+                <circle cx="500.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1722157957">
+                <circle cx="524.0" cy="352.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g id="id1880539052" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(556.0 207.24865490807193)">
+            <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+            </g>
+        </g>
+        <g latexdraw:type="circle" id="id587284595">
+            <circle cx="556.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id304555792">
+            <circle cx="580.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1975157279">
+            <circle cx="607.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1536303845">
+            <circle cx="557.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id916389971">
+            <circle cx="581.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1514399801">
+            <circle cx="606.0" cy="183.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id88914912">
+            <circle cx="558.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id979979106">
+            <circle cx="582.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id867266126">
+            <circle cx="606.0" cy="207.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="drawing" id="id1096871484">
+            <g id="id1675839401" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(555.0 280.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1269396868">
+                <circle cx="555.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id662797863">
+                <circle cx="579.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1898820465">
+                <circle cx="606.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id134905074">
+                <circle cx="556.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id143600930">
+                <circle cx="580.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id609421906">
+                <circle cx="605.0" cy="256.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id947487634">
+                <circle cx="557.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1674548611">
+                <circle cx="581.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id316166885">
+                <circle cx="605.0" cy="280.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g latexdraw:type="drawing" id="id2093304969">
+            <g id="id778423158" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(556.0 352.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1517594683">
+                <circle cx="556.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1166564731">
+                <circle cx="580.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id353853525">
+                <circle cx="607.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id363411450">
+                <circle cx="557.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1793290244">
+                <circle cx="581.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1837603750">
+                <circle cx="606.0" cy="328.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1136413579">
+                <circle cx="558.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id536261345">
+                <circle cx="582.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1860469323">
+                <circle cx="606.0" cy="352.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g id="id632627337" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(634.0 207.24865490807193)">
+            <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+            </g>
+        </g>
+        <g latexdraw:type="circle" id="id1955651967">
+            <circle cx="634.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id69969931">
+            <circle cx="658.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1694546468">
+            <circle cx="685.0" cy="158.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1344830473">
+            <circle cx="635.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id461075925">
+            <circle cx="659.0" cy="182.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1536439099">
+            <circle cx="684.0" cy="183.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id155429261">
+            <circle cx="636.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id1619670913">
+            <circle cx="660.0" cy="208.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id290828704">
+            <circle cx="684.0" cy="207.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="drawing" id="id568641875">
+            <g id="id1072660122" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(633.0 280.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.24865490807193"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id514755327">
+                <circle cx="633.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id879051377">
+                <circle cx="657.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2128177260">
+                <circle cx="684.0" cy="231.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id981914243">
+                <circle cx="634.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1351966302">
+                <circle cx="658.0" cy="255.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1325267191">
+                <circle cx="683.0" cy="256.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2077389644">
+                <circle cx="635.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id2009900159">
+                <circle cx="659.0" cy="281.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id231826294">
+                <circle cx="683.0" cy="280.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g latexdraw:type="drawing" id="id641920019">
+            <g id="id751442043" latexdraw:type="grid" latexdraw:XLabelsSouth="true" latexdraw:YLabelsWest="true" latexdraw:gridUnit="0.5024865490807193" latexdraw:gridEnd="2.0 2.0" latexdraw:gridStart="0.0 0.0" latexdraw:origin="0.0 0.0" transform="translate(634.0 352.2486549080719)">
+                <g stroke-width="1.4111111111111112" stroke="black" stroke-linecap="square" latexdraw:type="grid">
+                    <line x1="0.0" x2="0.0" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="25.124327454035967" x2="25.124327454035967" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="50.248654908071934" x2="50.248654908071934" y1="0.0" y2="-50.248654908071956"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-0.0" y2="-0.0"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-25.124327454035967" y2="-25.124327454035967"/>
+                    <line x1="0.0" x2="50.2486549080719" y1="-50.248654908071934" y2="-50.248654908071934"/>
+                </g>
+            </g>
+            <g latexdraw:type="circle" id="id1147815613">
+                <circle cx="634.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1452797203">
+                <circle cx="658.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1356590692">
+                <circle cx="685.0" cy="303.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id749612484">
+                <circle cx="635.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id979884354">
+                <circle cx="659.0" cy="327.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1408320616">
+                <circle cx="684.0" cy="328.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id1557543100">
+                <circle cx="636.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id21757679">
+                <circle cx="660.0" cy="353.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+            <g latexdraw:type="circle" id="id90348109">
+                <circle cx="684.0" cy="352.0" r="4.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+            </g>
+        </g>
+        <g latexdraw:type="rectangle" id="id1320424936">
+            <rect x="431.0" y="172.0" width="53.0" height="20.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="#b3b3b3"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id2038130522">
+            <rect x="514.0" y="247.0" width="53.0" height="20.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="#b3b3b3"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id534241680">
+            <rect x="593.0" y="316.0" width="53.0" height="20.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="#b3b3b3"/>
+        </g>
+        <g latexdraw:type="text" id="id1054817743" fill="black" latexdraw:position="bl">
+            <text x="435.0" y="192.0">$10 \  [\Omega]$</text>
+        </g>
+        <g latexdraw:type="text" id="id382085022" fill="black" latexdraw:position="bl">
+            <text x="515.0" y="266.0">$20 \ [\Omega]$</text>
+        </g>
+        <g latexdraw:type="text" id="id2117504921" fill="black" latexdraw:position="bl">
+            <text x="598.0" y="336.0">$50 \ [\Omega]$</text>
+        </g>
+        <g latexdraw:type="rectangle" id="id1352318124">
+            <rect x="492.0" y="201.0" width="15.0" height="38.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id7511302">
+            <rect x="573.0" y="274.0" width="15.0" height="38.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="black"/>
+        </g>
+        <g latexdraw:type="circle" id="id157297161">
+            <circle cx="250.0" cy="234.0" r="36.0" latexdraw:borderPos="outer" stroke="black" stroke-width="2.0" fill="#cccccc"/>
+        </g>
+        <g latexdraw:type="text" id="id1307986136" fill="black" latexdraw:position="bl">
+            <text x="243.0" y="240.0">G</text>
+        </g>
+        <g latexdraw:type="circle" id="id208753875">
+            <circle cx="393.5" cy="157.5" r="7.0" latexdraw:borderPos="outer" stroke="red" stroke-width="2.0" fill="red"/>
+        </g>
+        <g latexdraw:type="circle" id="id332232765">
+            <circle cx="683.5" cy="352.5" r="7.0" latexdraw:borderPos="outer" stroke="blue" stroke-width="2.0" fill="blue"/>
+        </g>
+        <g latexdraw:type="bezierCurve" id="id724939540">
+            <path d="M 395.0 158.0 C 338.0 147.0 326.0 127.0 272.0 206.0" stroke="red" stroke-width="2.0" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="bezierCurve" id="id931578978">
+            <path d="M 685.0 357.0 C 596.0 387.0 281.0 388.0 257.0 268.0" stroke="blue" stroke-width="2.0" fill="none" latexdraw:rotationAngle="0.0"/>
+        </g>
+    </g>
+    <defs/>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:centreHoriz>false</latexdraw:centreHoriz>
+            <latexdraw:positionVert/>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:vpx>0.5</latexdraw:vpx>
+            <latexdraw:vpy>0.4</latexdraw:vpy>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

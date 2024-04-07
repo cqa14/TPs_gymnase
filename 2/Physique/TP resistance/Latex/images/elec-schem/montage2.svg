@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="6cm" height="10cm" viewBox="95 68 102 183" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Arrière-plan">
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="96.1" y1="80.9" x2="120.6" y2="80.9"/>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="120.6" y="70.9" width="49" height="20" rx="0" ry="0"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="169.6" y1="80.9" x2="194.1" y2="80.9"/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="121.1" y="84.7811">
+      <tspan x="121.1" y="84.7811">200 [Ω]</tspan>
+    </text>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="97.1" y1="139.9" x2="121.6" y2="139.9"/>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="121.6" y="129.9" width="49" height="20" rx="0" ry="0"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="170.6" y1="139.9" x2="195.1" y2="139.9"/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="96.2" y1="200.8" x2="120.7" y2="200.8"/>
+      <rect style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x="120.7" y="190.8" width="49" height="20" rx="0" ry="0"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="169.7" y1="200.8" x2="194.2" y2="200.8"/>
+    </g>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="122.1" y="144.781">
+      <tspan x="122.1" y="144.781">100 [Ω]</tspan>
+    </text>
+    <text font-size="12.7998" style="fill: #000000; fill-opacity: 1; stroke: none;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="126.2" y="204.681">
+      <tspan x="126.2" y="204.681">50 [Ω]</tspan>
+    </text>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="96.1" y1="80.9" x2="97.1" y2="139.9"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="194.1" y1="80.9" x2="195.1" y2="139.9"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="97.1" y1="139.9" x2="96.2" y2="200.8"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="195.1" y1="139.9" x2="194.2" y2="200.8"/>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="115" y1="241" x2="140" y2="241"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="140" y1="236" x2="140" y2="246"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="150" y1="231" x2="150" y2="251"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="155" y1="236" x2="165" y2="236"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="160" y1="238.5" x2="160" y2="233.5"/>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" x1="150" y1="241" x2="175" y2="241"/>
+    </g>
+    <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="96.2,200.8 96.7989,241.032 115,241 "/>
+    <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #000000" points="194.2,200.8 194.38,241.739 175,241 "/>
+  </g>
+</svg>
