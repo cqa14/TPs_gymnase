@@ -1,0 +1,88 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{green}{RGB}{0,128,0}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+  \definecolor{steelblue31119180}{RGB}{31,119,180}
+
+  \begin{axis}[
+  legend cell align={left},
+  legend style={
+    fill opacity=0.8,
+    draw opacity=1,
+    text opacity=1,
+    at={(0.03,0.97)},
+    anchor=north west,
+    draw=lightgray204
+  },
+  tick align=outside,
+  tick pos=left,
+  x grid style={darkgray176},
+  xlabel={Volume de titrant \(\displaystyle [mL]\)},
+  xmajorgrids,
+  xmin=10, xmax=25,
+  xtick style={color=black},
+  y grid style={darkgray176},
+  ylabel={$pH$},
+  ymajorgrids,
+  ymin=6, ymax=11,
+  ytick style={color=black}
+  ]
+  \addplot [semithick, green]
+  table {%
+    10 6.6399998664856
+    10.5869998931885 6.77088022232056
+    11.08899974823 6.88957977294922
+    12.5450000762939 7.21169996261597
+    13.0410003662109 7.33901977539062
+    13.5209999084473 7.44630002975464
+    14.0419998168945 7.6042799949646
+    14.5220003128052 7.76923990249634
+    15.0459995269775 7.99115991592407
+    15.5920000076294 8.24048042297363
+    16.0830001831055 8.45818042755127
+    16.5149993896484 8.65509986877441
+    17.0459995269775 8.83380031585693
+    17.5919990539551 8.99575996398926
+    18.0809993743896 9.13430023193359
+    18.5149993896484 9.26270008087158
+    19.0230007171631 9.35229969024658
+    19.5219993591309 9.40396022796631
+    20.0459995269775 9.49643993377686
+    20.5799999237061 9.56960010528564
+    21.0270004272461 9.62162017822266
+    21.5429992675781 9.65429973602295
+    22.0860004425049 9.71032047271729
+    22.5440006256104 9.76352024078369
+    23.0790004730225 9.8047399520874
+    24.0890007019043 9.86711978912354
+    25 9.9399995803833
+  };
+  \addlegendentry{Interpolation}
+  \addplot [semithick, red]
+  table {%
+    9.92929267883301 6.63444423675537
+    17 8.1899995803833
+  };
+  \addlegendentry{Tangentes}
+  \addplot [semithick, red, forget plot]
+  table {%
+    14.5 8.5
+    24.5 10.3000001907349
+  };
+  \addplot [semithick, blue]
+  table {%
+    12 7.57000017166138
+    19.5 9.06999969482422
+  };
+  \addlegendentry{Moyenne}
+  \addplot [semithick, steelblue31119180, mark=*, mark size=3, mark options={solid}, only marks]
+  table {%
+    15.789999961853 8.32759952545166
+    15.789999961853 8.32759952545166
+  };
+  \addlegendentry{PE}
+  \end{axis}
+
+\end{tikzpicture}

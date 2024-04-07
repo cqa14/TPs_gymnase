@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+% Basic Packages for Encoding (Input AND Output) and Langauge Support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Change Layout with a User-Friendly Interface
+\usepackage[margin=1in]{geometry}
+
+% Include Pictures with a User-Friendly Interface
+\usepackage{graphicx}
+\usepackage{float}
+
+% Extended Math Support from the Famous 'American Mathematical Society'
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% For the chemistry
+\usepackage{chemist}
+
+% Just for Demonstration Purposes
+\usepackage[math]{blindtext}
+
+% For use on computer
+\usepackage{hyperref}
+
+% For table color
+\usepackage{xcolor,colortbl}
+
+% Titre
+\usepackage[affil-it]{authblk}
+\title{\textbf{EXERCICES COMPLEMENTAIRES SOLUBILITE ET EQUILIBRES} \\ \textit{Exercice 15}}
+\author{Romain Blondel}
+\affil{2M8, Gymnase Auguste Piccard}
+
+\begin{document}
+\maketitle
+
+\section*{Énoncé}
+La constante d'équilibre $K_c$, pour la décomposition de la vapeur d'eau à $500 \ [^\circ C]$, a une valeur de $6.00 \cdot 10^{-28}$. Si l'on place $2.00 \ [mol]$ d'eau dans un récipient de $5.00 \ [L]$ à $500 \ [^\circ C]$, quelles seront les concentrations à l'équilibre pour les 3 gaz \chemform{H_2}, \chemform{O_2},\chemform{H_2O} ? (Attention, procédez à des approximations après avoir examiné le problème !)
+
+\section*{Résolution}
+On commence par poser l’équation chimique équilibrée et calculer la concentration molaire de l'eau :
+\begin{chemmath}
+2{H_2O}_{(g)} \leftrightharpoons 2{H_2}_{(g)} + {O_2}_{(g)}
+\end{chemmath}
+$$C_{H_2O}=\frac{2.00 \ [mol]}{5.00 \ [L]} = 0.4 \left[ \frac{mol}{L} \right] = 0.4 \ [M]$$
+
+Tableau des variations :
+\begin{table}[H]
+\center
+\begin{tabular}{c|c c c c c}
+ & \chemform{2{H_2O}_{(g)}} & \chemform{\leftrightharpoons} & \chemform{2{H_2}_{(g)}} & \chemform{+} & \chemform{{O_2}_{(g)}} \\ \hline
+$t_0$ & $0.4 \ [M]$ & & $0$ & & $0$ \\
+$t_{eq}$ & $0.4 - 2x$ & & $2x$ & & $x$ \\
+\end{tabular}
+\end{table}
+
+On a donc :
+$$K_c = \frac{C_{H_2}^2 \cdot {C_{O_2}}}{C_{H_2O}^2} \Leftrightarrow 6.00 \cdot 10^{-28} = \frac{(2x)^2 \cdot x}{(0.4-2x)^2} = \frac{4x^3}{0.16 - 1.6 \cdot x + 4x^2} \Leftrightarrow $$
+$$0 = 4x^3 - 6 \cdot 10^{-28} \cdot (0.16 - 1.6 \cdot x + 4x^2) = 4x^3 - 2.4 \cdot 10^{-27} \cdot x^2 + 9.6 \cdot 10^{-28} \cdot x - 9.6 \cdot 10^{-29}$$
+$$\Leftrightarrow  x \approx 2.88 \cdot 10^{-10}, \ 2x \approx 5.77 \cdot 10^{-10}, \ 0.4-2x \approx 0.39$$
+
+En résumé :
+$$C_{H_2} \approx 5.77 \cdot 10^{-10} \ [M]$$
+$$C_{O_2} \approx 2.88 \cdot 10^{-10} \ [M]$$
+$$C_{H_2O} \approx 0.39 \ [M]$$
+
+\end{document}

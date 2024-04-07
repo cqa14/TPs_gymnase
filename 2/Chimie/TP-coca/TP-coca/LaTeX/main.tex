@@ -1,0 +1,351 @@
+%! Author = cqa
+%! Date = 02.05.23
+
+\documentclass[11pt]{article}
+% Basic Packages for Encoding (Input AND Output) and Langauge Support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Change Layout with a User-Friendly Interface
+\usepackage[margin=1in]{geometry}
+
+% Include Pictures with a User-Friendly Interface
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+
+% Extended Math Support from the Famous 'American Mathematical Society'
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Just for Demonstration Purposes
+\usepackage[math]{blindtext}
+
+% For the chemistry
+\usepackage{chemist}
+
+% For use on computer
+\usepackage{hyperref}
+
+% For table color
+\usepackage{xcolor,colortbl}
+
+% Tableau verticale
+\usepackage{rotating}
+
+% Figure dans figure
+\usepackage{subfig}
+
+% Multicolumn
+\usepackage{multirow}
+
+% Preuves
+\usepackage{amsthm}
+
+% Footnote
+\usepackage[bottom]{footmisc}
+
+% PsTricks
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pstricks-add}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage[space]{grffile} % For spaces in paths
+\usepackage{etoolbox} % For spaces in paths
+\makeatletter % For spaces in paths
+\patchcmd\Gread@eps{\@inputcheck#1 }{\@inputcheck"#1"\relax}{}{}
+\makeatother
+
+\usepackage{auto-pst-pdf}
+
+% Graphiques
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+% Titre
+\usepackage[affil-it]{authblk}
+\usepackage{textcomp}
+\usepackage{wasysym}
+\title{\textbf{TP Acidité du Coca-Cola}}
+\author{Manon Bruno, Romain Blondel}
+\affil{2M8, Gymnase Auguste Piccard}
+
+% Document
+\begin{document}
+
+\maketitle
+
+\section{But}\label{sec:but}
+Mesurer le taux d'acidité du Coca-Cola dû à l'acide phosphorique présent dedans au moyen du $pH$\@.
+
+\section{Introduction}\label{sec:introduction}
+
+Le Coca-Cola contient de l'acide carbonique que nous faisons évaporer et qui a donc peu d'influence dans
+nos mesures et de l'acide phosphorique.
+C'est un triacide de composition \chemform{H_3PO_4} ce qui veut dire qu'il est capable de céder tour à tour 3
+protons \chemform{H^+}.
+
+\begin{chemmath}
+    H_3PO_4 + H_2O \rightleftharpoons H_3O^+ + H_2PO_4^-
+\end{chemmath}
+\begin{chemmath}
+    H_2PO_4^- + H_2O \rightleftharpoons H_3O^+ + HPO_4^{2-}
+\end{chemmath}
+\begin{chemmath}
+    HPO_4^{2-} + H_2O \rightleftharpoons H_3O^+ + PO_4^{3-}
+\end{chemmath}
+
+Voici les 3 réactions de décomposition de l'acide phosphorique dans l'eau.
+On constate le caractère amphotère de l'acide phosphorique, c'est-à-dire qu'il peut se comporter comme un
+acide ou une base, lors de sa décomposition en \chemform{H_2PO_4^-} et \chemform{HPO_4^{2-}}.
+Elles peuvent être résumées par la réaction suivante :
+
+\begin{chemmath}
+    H_3PO_4 + 3H_2O \rightleftharpoons 3H_3O^+ + PO_4^{3-}
+\end{chemmath}
+
+Bien qu'il soit utilisé dans différents sodas, nous pouvons aussi le retrouver dans des engrais ou des détergents.
+Il faut aussi noter que sa grande consommation peut augmenter les risques de calculs rénaux
+(et plus généralement causer des problèmes aux reins).
+Ce risque se retrouve donc lorsqu'une trop grande consommation de Coca-Cola a lieu au quotidien aux côtés
+des risques de diabètes et d'obésité ce qui ne stoppe cependant pas cette boisson d'être très consommée
+dans le monde.\\
+
+Le taux d'acidité se mesure grâce au $pH$ (potentiel hydrogène).
+C'est une échelle adimensionnelle qui va de 0 à 14.
+Un $pH$ de 0 représente un acide fort, un de 7 une solution neutre telle que l'eau et un $pH$ de 14 représente
+ une base forte.
+Le Coca en possédant un d'environ 2, il est considéré comme acide.\\
+Le $pH$ est la mesure de la concentration d'ion \chemform{H^+} dans une solution (dans les équations qui suivent, $C$
+désigne la concentration).
+On l'obtient grâce à la formule $pH= - \log(C_{H^+})$ et, pour un acide fort, cela correspond à
+$pH= - \log(C_{HA})$, car sa réaction de décomposition peut être considéré comme à sens unique
+\chemform{HA \rightarrow H^+ + A^-}, avec \chemform{HA} un acide.\\
+Or quand on a un acide faible, comme l'acide phosphorique dans notre cas, la réaction de décomposition est
+à double sens, c'est-à-dire que l'acide peut se recomposer à partir de ses ions
+\chemform{HA \rightleftharpoons H^+ + A^-}.
+Alors on obtient une nouvelle formule pour calculer le pH d'un acide faible $pH = \frac{1}{2} (pK_a - \log(C_{HA}))$.
+Le $pK_a$ se calcule comme suit : $pK_a = - \log(K_a)$ avec $K_a = \frac{C_{H^+}C_{A^-}}{C_{HA}}$ la constante de la
+vitesse de réaction de décomposition de l'acide.\\
+Pour un polyacide on pourrait avoir une formule plus complexe, mais dans notre cas, nous pouvons négliger
+les autres réactions de décomposition de l'acide phosphorique et donc le considérer comme un monoacide faible.\\
+Il faut aussi noter qu'il existe de nombreuses façons de mesurer le $pH$\@.
+Ici, nous avons fait appel à un pH-mètre, mais des indicateurs colorés sous forme de ruban ou du jus de
+choux-rouge sont d'autres moyens de l'obtenir.
+
+\section{Principe de mesure et description}\label{sec:principe-de-mesure-et-description}
+
+Afin d'avoir les résultats les plus précis possibles, il est nécessaire d'enlever le gaz carbonique présent
+dans le Coca-Cola.
+On a donc commencé par le chauffer en le remuant, assez chaud pour que le gaz s'échappe, mais pas trop pour
+éviter que le volume de Coca ne change trop à cause de l'évaporation.
+Ensuite, on a mesuré le $pH$ du Coca-Cola avec le pH-mètre, puis reporté son évolution au fur et à mesure
+de l'ajout de la solution titrante de NaOH\@.
+Finalement, on exploite ces données en les reportant sur un graphique.
+
+\subsection{Matériel}\label{subsec:materiel}
+\begin{itemize}
+\item $25 \ [mL]$ de Coca-cola
+\item Pipette de $25 \ [ml]$
+\item Bécher à large col de $100 \ [ml]$
+\item Barreau magnétique
+\item Agitateur magnétique
+\item Burette de $50 \ [mL]$
+\item Solution de NaOH à $0.020 \ [M]$
+\item pH-mètre
+\item Entonnoir
+\item Bécher poubelle
+\end{itemize}
+
+\subsection{Montage}\label{subsec:montage}
+\input{ext/schema}
+
+\subsection{Mode opératoire}\label{subsec:mode-operatoire}
+\begin{enumerate}
+\item Récupérer $25 \ [mL]$ de Coca-cola à l'aide de la pipette et les verser dans le bécher de $100 \ [mL]$.
+\item Mettre le barreau magnétique dans le bécher, placer ce dernier sur l'agitateur magnétique.
+Faire chauffer le Coca-cola pendant 5 minutes à environ $80 \ [^\circ C]$.
+\item À l'aide de l'entonnoir, remplir la burette de quelques millilitres de plus que la limite de 50 puis vider
+ le surplus dans le bécher poubelle.
+\item Brancher le pH-mètre, allumer le et placer la sonde dans le bécher de Coca-cola en veillant à ce qu'elle
+ ne gêne pas la rotation du barreau magnétique, ensuite lancer l'agitateur en veillant à ce que le Coca-Cola
+ n'éclabousse pas.
+\item Placer l'ouverture de la burette sur le goutte à goutte puis noter le $pH$ tous les $0.5 \ [mL]$ jusqu'à
+ atteindre un $pH$ de 11 ou ne plus avoir de liquide dans la burette.
+\end{enumerate}
+
+\section{Résultats}\label{sec:resultats}
+Ci-dessous sont consignés les résultats obtenus lors de l'expérience.
+Parmi les 100 mesures effectuées, certaines sont un peu faussées par des erreurs de manipulation.
+En effet, à la mesure pour $41 \ [mL]$, il a été question d'arrêter les mesures avant de les relancer pour
+les dernières.
+Relancer la mesure nous a empêché de mesurer le $pH$ pour cette valeur et les quelques résultats suivants
+semblent avoir été faussés (voir Figure~\ref{fig:data-plot}).
+
+\input{ext/table-result}
+
+Les mesures ont donc été mise en forme dans le graphique qui suit.
+Les points de mesures ont été interpolés de manière linéaire afin de facilité la lecture du graphique et le
+traitement des données.
+De plus, on y a ajouté le tracé théorique avec les données théoriques.
+On y a mis les valeurs initiales de l'expérience ainsi que la concentration d'acide phosphorique dans le
+Coca-Cola\footnote{\href{https://fr.coca-cola.be/developpement-durable/boissons/ingredients/decouvrir-les-ingredients-de-nos-boissons}{Site de \textit{Coca-Cola}}}.
+Il y est dit que le Coca-Cola contient $190 \ [mg]$ d'acide phosphorique pour $330 \ [mL]$ de Coca-Cola.
+De là, on obtient sa concentration $\frac{190 \ [mg]}{330 \ [mL]} = 0.\overline{57} \ [g/L]$, soit environ
+$0.006 \ [M]$ si l'on prend le rapport de $98 \ [g]$ de \chemform{H_3PO_4} correspond à $1 \ [mol]$\footnote{\href{https://www.laboratorynotes.com/molarity-of-85-percent-phosphoric-acid-h3po4/}{Poids de la molécule de \chemform{H_3PO_4} issu d'une référence externe}}.
+
+\begin{figure}[H]
+\centering
+\input{ext/data-plot}
+\caption[Mesure du $pH$ selon le titrant (\chemform{NaOH}) et valeurs théoriques avec du \chemform{OH^-}]{Mesure
+du $pH$ selon le titrant (\chemform{NaOH}) et valeurs théoriques\protect\footnotemark avec du \chemform{OH^-}}
+\label{fig:data-plot}
+\end{figure}
+\footnotetext{\href{http://www.cheminfo.org/flavor/gymnase/index.html}{Source : \textit{cheminfo.org}} -
+paramètres : "Solution à titrer : \chemform{H_3PO_4}, $0.006 \ [M]$, $25 \ [mL]$" ; "Titrant : \chemform{OH^-},
+$0.02 \ [M]$, $50 \ [mL]$"}
+
+De ces données, on peut en déduire les points d'équivalence et de demi-équivalence.
+Pour cela, on a utilisé la méthode des tangentes.
+On a tracé une tangente de chaque côté des ``sauts'' dans la courbe, avec les deux la même pente, calculée
+via la dérivée numérique $f'(x) = \frac{f(x + \Delta x) - f(x)}{\Delta x}$.
+De fait, en prenant la moyenne des deux droites, le croisement avec le graphe correspond au point d'équivalence,
+qui est au milieu du ``saut'' de $pH$\@.
+
+\begin{figure}[H]
+\centering
+\subfloat[PE 1\label{fig:tan-pe1}]{\input{ext/tangent1-plot}}
+\subfloat[PE 2\label{fig:tan-pe2}]{\input{ext/tangent2-plot}}
+\caption{Recherche de deux des trois points d'équilibre (PE) via la méthode des tangentes}\label{fig:cont-tan}
+\end{figure}
+
+En divisant le volume de \chemform{NaOH} utilisé pour atteindre le point d'équivalence par deux, on obtient
+le point de demi-équivalence.
+Ces points remarquables sont résumés dans la Figure~\ref{fig:sum-pe}.
+
+\begin{figure}[H]
+\centering
+\input{ext/resum-tit}
+\caption{Points d'équivalence (PE) et de demi-équivalence (PE/2)}\label{fig:sum-pe}
+\end{figure}
+
+La table~\ref{tab:resum-ph-pka} résume les divers points trouvés, ainsi que les valeurs issues des tables de
+référence.
+Pour chaque point est indiqué la molécule dont on parle, les résultats pertinents, ainsi que le $pK_a$.
+Pour les mesures, le $pK_a$ correspond au $pH$ au point de demi-équivalence.
+Il est également consigné l'erreur $\frac{|mesure - théorie|}{théorie}$ entre le $pK_a$ théorique et mesuré.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\columncolor{gray}}c|c|>{\columncolor{lightgray}}c|c|>{\columncolor{lightgray}}c|c|>{\columncolor{lightgray}}c|}
+\hline
+\rowcolor{gray} Point & Molécule & $V_{NaOH} \ [mL]$ & $pH$ & $pK_a$ & $pK_a$ théorique & Erreur $[\%]$ \\
+\hline
+Équivalence 1 & \chemform{H_3PO_4} & 7.22 & 4.87 & \cellcolor{black!70} & 2.16 & \cellcolor{black!70} \\
+\hline
+Demi-équivalence 1 & \chemform{H_3PO_4} & 3.61 & 2.87 & 2.87 & 2.16 & 32.85 \\
+\hline
+Équivalence 2 & \chemform{H_2PO_4^-} & 15.79 & 8.33 & \cellcolor{black!70} & 7.21 & \cellcolor{black!70} \\
+\hline
+Demi-équivalence 2 & \chemform{H_2PO_4^-} & 7.9 & 5.76 & 5.76 & 7.21 & 20.09 \\
+\hline
+3e point (non-mesuré) & \chemform{HPO_4^{2-}} & \cellcolor{black!70} & \cellcolor{black!70} & \cellcolor{black!70} & 12.32 & \cellcolor{black!70} \\
+\hline
+\end{tabular}
+\caption{Résumé des résultats, calcul d'erreur sur le $pK_a$}\label{tab:resum-ph-pka}
+\end{table}
+
+Finalement, on peut estimer de ces résultats la concentration d'acide phosphorique dans le Coca-Cola.
+À noter qu'il est calculé selon les valeurs officielles à $0.006 \ [M]$ au début de la section.
+Pour le faire via nos mesures, on va utiliser la formule du $pH$ d'un acide faible, en considérant le
+triacide phosphorique comme un monoacide, car les autres $K_a$ sont assez éloignés pour ne pas devoir être pris en
+compte ($K_{a_1} = 6.92 \cdot 10^{-3} \gg K_{a_2} = 6.17 \cdot 10^{-8} \gg K_{a_3} = 4.79 \cdot 10^{-13} $).\\
+On a donc $pH = \frac{1}{2} (pK_a - \log(C_{HA})) \Leftrightarrow C_{HA} = 10^{pK_a - 2 \cdot pH}$.
+D'où via la $pK_a$, et le $pH$ mesuré avant de mettre le produit titrant (voir point 0, table~\ref{tab:ph}) :
+\[ C_{H_3PO_4} \approx 10^{2.87 - 2 \cdot 2.42} \approx 0.012 \ [M] \]
+En faisant la même chose pour la valeur théorique en utilisant à la place le $pK_a$ des tables de référence, on obtient :
+\[ C_{H_3PO_4} \approx 10^{2.16 - 2 \cdot 2.42} \approx 0.002 \ [M] \]
+Ce qui nous donne par rapport au premier résultat une concentration $2 \times$ plus élevée, respectivement
+$3 \times$ plus basse.
+
+\section{Discussion}\label{sec:discussion}
+
+Cette expérience permet d'encadrer correctement la concentration d'acide phosphorique dans le Coca-Cola.
+En effet, en mesurant son $pH$, on a pu obtenir une première approximation de sa concentration en utilisant le $pK_a$
+de l'acide phosphorique issu des tables de référence.
+Dans un deuxième temps, la courbe de titration nous a permis de trouver les points d'équivalence et de demi-équivalence,
+puis de calculer le $pK_a$ d'acide dans notre solution de Coca-Cola, en considérant que cela n'était que du \chemform{H_3PO_4}.
+En comparant les deux résultats à celui issu du site officiel de Coca-Cola, on peut voir que la concentration
+d'acide phosphorique dans le Coca-Cola est bien de l'ordre de $0.006 \ [M]$.
+Le premier nous en indique $0.002 \ [M]$ et le second $0.012 \ [M]$ et la concentration officielle se situe bien
+dans cet ordre de grandeur.\\ \\
+Ces différences relativement grandes proportionnellement à la taille ne sont néanmoins pas trop surprenantes, et en
+valeur concrète, elles ne sont pas si grandes que cela.
+Tout d'abord, il faut noter les erreurs de mesure et celles dues par le dispositif expérimental.
+Celles-ci sont multiples, a commencé par les produits utilisés, comme le Coca-Cola, qui a été stocké plusieurs semaines
+avant l'expérience, et qui a donc pu être altéré, ou encore le produit titrant, qui a été préparé et utilisé
+par d'autres personnes avant nous, et qui a donc pu être contaminé.\\ \\
+Les erreurs dues au matériel sont minimes, mais il faut quand même noté que le dernier calibrage du pH-mètre date du
+29 juin 2022 pour une expérience menée le 27 avril 2023.
+Dans le déroulement de l'expérience, on peut noter que l'on a fait dégazer le Coca-Cola après avoir mesuré son volume,
+et l'on a donc pu modifier son volume à cause de l'évaporation.
+De plus, on n'a pas attendu avant de continuer l'expérience, et donc le Coca était à 43 degrés Celsius lors de la
+première mesure de $pH$, ce qui peut expliquer l'écart avec le $pK_a$ théorique qui est mesuré à 25 degrés Celsius.
+Pour continuer dans ce registre, le dégazage n'est pas forcément complet, et donc il peut rester du dioxyde de carbone
+dans le Coca-Cola, ce qui peut modifier le $pH$ car le Coca serait plus acide (ce qui semble assez plausible au vu
+de la comparaison avec la courbe théorique de la figure~\ref{fig:data-plot}).\\ \\
+Finalement, le temps de mesure était assez limité, et donc le $pH$ n'était pas forcément stabilisé lors de la mesure,
+ce qui peut expliquer le pH plus bas, et qui peut aussi justifier la présence de gaz encore dissous dans le Coca-Cola.
+On peut aussi noter le panel de mesure trop bas pour voir la troisième équivalence.\\
+De plus, il faut notifier les approximations dans le traitement des résultats, comme le fait de considérer le triacide
+phosphorique comme un monoacide, ou encore l'interpolation linéaire des mesures plutôt que l'approximation par une
+fonction, qui aurait permis une meilleure dérivée et donc une méthode des tangentes plus précise, mais cela n'offrait pas
+un avantage suffisant pour justifier le temps supplémentaire que cela aurait pris, car ces fonctions sont paramétriques
+avec comme borne les points recherchés\footnote{\href{https://www.epfl.ch/labs/gdp/wp-content/uploads/2019/09/ERC_18_Chapitre_7C.pdf}{Issu d'un exemple de titrage acide-base}}.\\
+
+\subsection*{Réponses aux questions du protocole}
+\begin{enumerate}
+    \item \textit{Écrire les équations de dissociation de l'acide phosphorique.}\\
+        Voir les équations de dissociation de l'acide phosphorique dans l'eau dans la section~\ref{sec:introduction}.
+    \item \textit{Quelles sont les valeurs de $pH$ au point de demi-équivalence ?}\\
+        Les valeurs sont visibles sur le graphique de la figure~\ref{fig:sum-pe} et la table~\ref{tab:resum-ph-pka}.
+        Pour la troisième demi-équivalence, la plage de résultat de l'expérience ne permet pas de la voir.
+    \item \textit{Quelles sont les valeurs de $pH$ au point d'équivalence ?
+        Déterminer les volumes équivalents et les $pK_a$.}\\
+        Toutes ces valeurs sont également visibles sur les graphiques et tables cités à la question précédente.
+        Pour déterminer le $pK_a$, on a utilisé la propriété d'égalité entre le $pK_a$ et le $pH$ au point de
+        demi-équivalence.
+    \item \textit{Comparer les volumes nécessaire de base pour neutraliser le premier et le deuxième ion \chemform{H^+}
+        et expliquer les éventuelles différences.}\\
+        Les volumes semblent assez équivalents (voir table~\ref{tab:resum-ph-pka}), soit le volume du second point
+        d'équivalence est environ le double du premier.
+        Cela semble cohérent avec les courbes de références (figure~\ref{fig:data-plot} et note de la section \ref{sec:discussion}).
+        Cela peut être justifié que chaque mole de \chemform{H_3PO_4} va créer en libérant son proton hydron une mole
+        de \chemform{H_2PO_4^-}, qui va donc être compensée par la même quantité de base.
+    \item \textit{Calculer la concentration de l'acide phosphorique dans le Coca.}\\
+        Voir les différentes valeurs discutées dans la section~\ref{sec:resultats}.
+\end{enumerate}
+
+\section{Conclusion}\label{sec:conclusion}
+En conclusion, on peut dire que l'expérience a été concluante.
+Elle a permis de déterminer correctement la concentration d'acide phosphorique dans le Coca-Cola, ainsi que de se
+familiariser avec les notions de titrage via des courbes de titrage.
+Néanmoins, l'expérience pourrait être améliorée avec plus de temps à disposition, pour pouvoir faire plus de mesures
+et plus précises, en laissant le $pH$ se stabiliser avant de le mesurer, et en essayant de mieux dégazer le Coca-Cola.
+Cela nous aurait également permis avec plus de solution titrante d'obtenir le troisième point d'équivalence.
+De plus, il aurait été intéressant de connaitre la fonction générale de manière continue afin d'établir une courbe de
+tendance et donc de trouver les points d'équivalence plus précisément.
+Il faut conclure en disant que malgré les erreurs (voir table~\ref{tab:resum-ph-pka}), les résultats sont assez
+satisfaisants, car les valeurs sont à une échelle très petite et il est donc difficile de les mesurer avec précision,
+et donc avoir une telle précision avec le matériel à disposition est déjà très appréciable.
+
+\end{document}
