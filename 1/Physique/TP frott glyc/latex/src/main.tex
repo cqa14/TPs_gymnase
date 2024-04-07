@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[none]{hyphenat}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{array,multirow,makecell}
+\setcellgapes{1pt}
+\makegapedcells
+\usepackage[table]{xcolor}
+\usepackage{import}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{amssymb}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\slshape \MakeUppercase{Sur le frottement de la glycérine}}
+\fancyhead[R]{\slshape {Julien Bricka, Romain Blondel}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0pt}
+
+\def \hfillx {\hspace*{ -\textwidth} \hfill}
+
+\setlength\arrayrulewidth{1pt}
+
+\title{\textbf{Sur le frottement de la glycérine}}
+\author{Julien Bricka \and Romain Blondel}
+\date{1M8, Gymnase Auguste Piccard\\6 Avril 2022}
+
+\begin{document}
+    \maketitle
+
+    \input{sections/intro.tex}
+    \input{sections/mas.tex}
+    \input{sections/result.tex}
+    \input{sections/analyse.tex}
+    \input{sections/conclusion.tex}
+
+\end{document}
