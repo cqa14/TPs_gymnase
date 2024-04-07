@@ -1,0 +1,241 @@
+Gymnase Auguste Piccard                                                                             
+                                                                         2021-2022
+
+Laboratoire  nO 3                                    Note (compte double)                  
+
+Distillation d'un vin rouge
+Adapté du TP « Distillation d'un vin rouge » de M. Julien Falcy, enseignant à Auguste Piccard. 
+Merci à lui !
+Buts
+•     Comprendre les principes de la distillation
+•     Distiller 65 mL de vin rouge
+•     Calculer la teneur en alcool du distillat puis la teneur en alcool du vin rouge.
+
+Introduction  théorique
+1.  Le vin rouge
+Le  vin  rouge  est  un  mélange  homogène  complexe  d'environ  500  composés.  La  variation  de  
+leurs concentrations  offre  à  chaque  vin  des  propriétés  organoleptiques uniques  (robe,  
+bouquet  et  saveur). Parmi ses composés, on compte notamment
+
+•     Eau', qui est le solvant du mélange ;
+•     Ethanol² (CzHsOH), qui est le soluté présent en plus grande quantité ;
+•     Glycérol ;
+•     Acides organiques, dont l'acide tartrique, malique, lactique et succinique ;
+•     Sucres ;
+•     Minéraux ;
+•     Arômes, dont les tanins ;
+•     Colorants ;
+"                     •     Vitamines, principalement la famille des B et C2.
+
+Le  moût  de  raisin  est  transformé  en  vin  rouge  au  cours  d'un  procédé  appelé  
+vinification,  durant laquelle  toute  une  suite  de  transformations  physiques,  biologiques  et 
+ chimiques  ont  lieu.  Parmi  les transformations biologiques, deux fermentations  successives ont 
+lieu à l'aide de microorganismes.
+
+a)   La fermentation alcoolique transforme le glucose (C6H12O6) du moût en éthanol et COz
+Levure
+6Htt 06            *     2 C2Ht OH    -F     2 C02
+
+b)   La fermentation malolactique transforme l'acide malique (C4H6Os) en acide lactique (C3H6Os) et 
+CO2.
+
+
+C4H605
+Oen ococcus oeni
+C3H603    +     C02
+
+2.   La teneur alcoolique
+La  teneur  en  alcool  d'une  boisson  alcoolisée  se  mesure  en  volumes  %  [vol  %].  Elle  
+représente  le volume  d’éthanol  pur contenu  dans  la boisson.  Ainsi  un vin  rouge  dont  
+l'étiquette  indique  12 vol % contient 12 mL d’éthanol pur sur 100 mL de vin.
+
+
+ˡ  Tëbullitiop (H2O)  =  100  °C
+2  Tëbullitio» (Ethanol) = 78.4°C
+
+Gymnase Auguste Piccard                                                                             
+                                                                 2021-2022
+
+3.   La distillation  fractionnée
+La  distillation   est  une  technique   de  séparation   de  deux  liquides   miscibles   en  
+fonction  de  leur température  d'ébullition.  Dans  un  mélange  eau-éthanol  porté  à  80  °C,  
+deux  phénomènes  physiques distincts sont observés
+
+•     Évaporation de l'eau
+•     Ébullition de l'alcool
+
+La  colonne  Vigreux  permet  une  bonne  séparation  des constituants  du  mélange.  En  effet,  
+lorsque  les  vapeurs montent    dans   la   colonne,    elles   refroidissent    et   se 
+condensent  sur les aiguilles  de la colonne.  Ce  liquide  est ensuite   à   nouveau   chauffé   
+progressivement   par   les vapeurs  qui continuent  de monter, jusqu'à être vaporisé à nouveau.
+
+A    cause    de    toutes    ces    vaporisations-condensations successives,  l'eau  retombe  et  
+les  vapeurs  montantes  sont de plus en plus chargées en éthanol.
+
+Montage
+1.    Avant tout ; évitez de forcer sur les rodages.
+2.    Le ballon bicol est placé dans la calotte chauffante.
+3.    La  colonne  Vigreux  est  attachée  verticalement  sur  le  ballon  à  l'aide  d'un  clip  
+de  sécurité  et  le second col est fermé avec le bouchon rodé.
+4.    La calotte est attachée au statif à l'aide d'un cercle et la colonne Vigreux à l'aide d'une 
+pince.
+5.    Un réfrigérant à eau est placé au-dessus de la colonne Vigreux et un thermomètre rodé est 
+placé à son sommet.
+6.    Le cylindre gradué est maintenu à la sortie du réfrigérant à l'aide d'une pince et d'un 
+statif.
+
+Méthode
+1.    Peser les deux cylindres gradués de 10 mL (noter les résultats précis sur la page suivante).
+2.    Monter l'appareil à distiller selon les instructions données ci-dessus.
+3.    Introduire 2-3 pierres à distiller et 65 mL de vin rouge dans le ballon de 250 mL.
+4.    Faire contrôler le montage par l'enseignant.
+5.    Allumer l'eau du réfrigérant puis enclencher la calotte chauffante au maximum.
+6.    Dès le début de l'ébullition,  un front de vapeur d’éthanol monte dans la colonne Vigreux. 
+Afin de
+garantir  une bonne séparation  eau-éthanol,  l'ascension  ne doit pas se faire en moins de 2 min. 
+Il faut alors jouer avec la puissance de la calotte ; en l’allumant/arrêtant, voir en la 
+descendant.
+7.    Dès la première  goutte de distillat  obtenue  dans le  letcylindre gradué,  la température  
+de vapeur est notée tous les 0.5 mL de distillat écoulés.
+8.    Lorsque  la température  dépasse  82 °C,  le distillat  est récolté  dans le 2"ᵉ cylindre  
+gradué.  Le but est d'obtenir 6 à 7 ml de distillat dans ce second cylindre gradué.
+
+
+
+
+2
+
+Gymnase Auguste Piccard                                                                             
+                                                                 2021-2022
+
+
+Résultats & Compte-rendu  (partie 1) : Relevé de températures
+
+Nom du vin  =                                                                                       
+           
+
+Vvin  prélevé                                      mL
+
+Teneur alcoolique      (indiqué sur l'étiquette)  =                         vol. % d'éthanol
+
+
+
+
+
+
+cylindre 1 (vide)                                                             
+
+
+cylindre 1 (plein)                                                            
+
+
+distillat (1)                                                                      
+cylindre 2 (vide)                                                             
+
+
+cylindre 2 (plein )                                                           
+
+
+distillat (2)                                                                        
+
+Vdistillat (1)            '                                                         mL              
+ Vdistillat(2)          '                                                         mL
+
+
+Température des vapeurs en tête de colonne en fonction du volume de distillat
+
+À relever tous les 0.5 mL, jusqu'à  en total d'environ  12 mL de distillat.
+
+
+Vdistillat   IRl)   t           Tvapeur   °     ]                           Vdistillat  [IRl)   t   
+        Tvapeur  °      ]
+Tvapeur [°C]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Discussion des résultats (partie I)
+1.    Représentez  graphiquement  (main  ou  excel),  à  l'aide  des  valeurs  ci-dessus,  
+l'évolution  de  la température de vapeur en tête de la colonne en fonction du volume de distillat 
+! Le graphique doit porter un titre, les axes également, ainsi que des unités, et n'oubliez pas vos 
+légendes.
+
+2.    Discutez de manière détaillée l'évolution de cette courbe.
+
+
+
+
+
+
+3
+
+Gymnase Auguste Piccard                                                                             
+                                                                         2021-2022
+
+
+Résultats & Compte-rendu  (partie 2)   Analyse des deux distillats
+1.   Distillat 1
+
+•       Ö(d   t mat 1)    en         puis  en —p)
+
+•     Teneur alcoolique(d    »  t  ›  -   (à trouver sur le graphique)  =
+
+Véthanol  (distillat 1)
+
+
+2.   Distillat 2
+
+•      Ö(d   t iiat 2)    en         puis  en —p)
+
+•     Teneur alcoolique(d    »  t  ›  -   (à trouver sur le graphique)  =
+
+Véthanol  (distillat 2)
+
+
+3.   Total (distillat 1 + distillat 2)
+
+‘          Véthano1,total
+
+•     Teneur alcoo1ique,;n  =
+
+Discussion des résultats (partie II)
+1.    Calculez  les  erreurs  absolue  et  relative  de  votre  expérience  (voir  laboratoire  n°  
+1)  afin  de comparer les valeurs de la teneur alcoolique  théorique (sur la bouteille) et 
+pratique.
+
+2.    Discutez des causes d'erreurs possibles de manière précise et détaillée (au moins 4).
+
+Masse volumique du distillat en fonction de la teneur alcoolique
+
+1000
+
+
+950
+
+
+900
+
+850
+
+
+800
+
+
+750
+0          10         20         30         40         50         60         70         80         
+90        100
+Teneur alcoolique [vol.%]
+
+
+4
